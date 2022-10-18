@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>SRC調査員登録システム</title>
+<meta name="description" content="">
+<meta name="keywords" content="サーベイリサーチセンター,調査員登録システム,交通量調査">
+<meta name="viewport" content="width=device-width">
+
+<!--<script type="text/javascript" src="/0/tyousa_sys/js/footerFixed.js"></script>>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+<div id="container">
+
+<header>
+<h1>ヘッダー</h1>
+</header>
+
+<div id="contents">
+
+<section>
+<h2>新規会員登録</h2><p>
+
+<script type="text/javascript">
+function clear(){
+    document.getElementById('cl00').value = '';
+    document.getElementById('cl01').value = '';
+    document.getElementById('cl02').value = '';
+    document.getElementById('cl03').value = '';
+    document.getElementById('cl04').value = '';
+    document.getElementById('cl05').value = '';
+    document.getElementById('cl06').value = '';
+    document.getElementById('cl07').value = '';
+    document.getElementById('cl08').value = '';
+    document.getElementById('cl09').value = '';
+    document.getElementById('cl10').value = '';
+    document.getElementById('cl11').value = '';
+    document.getElementById('cl12').value = '';
+    document.getElementById('cl13').value = '';
+    
+    document.getElementById('cl14').value = '';
+    document.getElementById('cl15').value = '';
+    document.getElementById('cl16').value = '';
+    document.getElementById('cl17').value = '';
+    document.getElementById('cl18').value = '';
+    document.getElementById('cl19').value = '';
+    document.getElementById('cl20').value = '';
+    
+    //ランクはない
+    //document.getElementById('cl21').value = '';
+    
+    document.getElementById('cl22').value = '';
+    
+    document.getElementById('cl23').checked = false;
+    document.getElementById('cl24').checked = false;
+    document.getElementById('cl25').checked = false;
+    document.getElementById('cl26').checked = false;
+    document.getElementById('cl27').checked = false;
+    document.getElementById('cl28').checked = false;
+    document.getElementById('cl29').checked = false;
+    document.getElementById('cl30').checked = false;
+    
+    document.getElementById('cl31').value = '';
+    document.getElementById('cl32').value = '';
+    document.getElementById('cl33').value = '';
+    document.getElementById('cl34').value = '';
+    document.getElementById('cl35').value = '';
+}
+</script>
+
+<form name="form1" method="post">
+
+<table class="ta1" border="1" cellpadding="5" width="90%"> 
+<tbody><tr>        
+<td class="abc1">姓（漢字）</td>
+<td><input type="text" id="cl00" name="NameFirst" value="" ></td> 
+</tr> 
+<tr>
+<td class="abc1">名（漢字）</td>
+<td><input type="text" id="cl03" name="NameLast" value="" ></td>
+</tr> 
+<tr>
+<td class="abc1">せい（ふりがな）</td>
+<td><input type="text" id="cl05" name="NameFirstRead" value="" ></td> 
+</tr>
+<tr>
+<td class="abc1">めい（ふりがな）</td>
+<td><input type="text" id="cl07" name="NameLastRead" value="" ></td> 
+</tr>
+<tr>
+<td class="abc1">性別</td>
+<td>
+<input name="Sex" id="sem1" type="radio" value="1" >
+<label for="sem1">男性</label>
+<input name="Sex" id="sem2" type="radio" value="2" >
+<label for="sem2">女性</label>
+</td>
+</tr>
+<tr>
+<td class="abc1">生年月日</td>
+<td>
+<input type="date" id="cl18" name="BirthDay" value=""  style="width:120px">
+</td>
+</tr>
+<tr>
+<td class="abc1">郵便番号</td>
+<td>
+    <input type="text" id="cl01" name="PostNumber1" value="" maxlength="3" style="width:80px">
+    &nbsp;-&nbsp;
+    <input type="text" id="cl02" name="PostNumber2" value="" maxlength="4" style="width:80px">
+</td>
+</tr>
+<tr>
+<td class="abc1">都道府県</td>
+<td>
+<select name="Prefecture" id="cl04">
+<option value="" selected selected>選択しない</option>
+<option value="1" >北海道</option>
+<option value="2" >青森県</option>
+<option value="3" >岩手県</option>
+<option value="4" >宮城県</option>
+<option value="5" >秋田県</option>
+<option value="6" >山形県</option>
+<option value="7" >福島県</option>
+<option value="8" >茨城県</option>
+<option value="9" >栃木県</option>
+<option value="10" >群馬県</option>
+<option value="11" >埼玉県</option>
+<option value="12" >千葉県</option>
+<option value="13" >東京都</option>
+<option value="14" >神奈川県</option>
+<option value="15" >新潟県</option>
+<option value="16" >富山県</option>
+<option value="17" >石川県</option>
+<option value="18" >福井県</option>
+<option value="19" >山梨県</option>
+<option value="20" >長野県</option>
+<option value="21" >岐阜県</option>
+<option value="22" >静岡県</option>
+<option value="23" >愛知県</option>
+<option value="24" >三重県</option>
+<option value="25" >滋賀県</option>
+<option value="26" >京都府</option>
+<option value="27" >大阪府</option>
+<option value="28" >兵庫県</option>
+<option value="29" >奈良県</option>
+<option value="30" >和歌山県</option>
+<option value="31" >鳥取県</option>
+<option value="32" >島根県</option>
+<option value="33" >岡山県</option>
+<option value="34" >広島県</option>
+<option value="35" >山口県</option>
+<option value="36" >徳島県</option>
+<option value="37" >香川県</option>
+<option value="38" >愛媛県</option>
+<option value="39" >高知県</option>
+<option value="40" >福岡県</option>
+<option value="41" >佐賀県</option>
+<option value="42" >長崎県</option>
+<option value="43" >熊本県</option>
+<option value="44" >大分県</option>
+<option value="45" >宮崎県</option>
+<option value="46" >鹿児島県</option>
+<option value="47" >沖縄県</option>
+</select>
+</td>
+</tr>
+<tr>
+<td class="abc1">市区町村名</td>
+<td><input type="text" id="cl06" name="Municipalities" value="" style="width:250px"></td>
+</tr>
+<tr>
+<td class="abc1">番地名</td>
+<td><input type="text" id="cl08" name="Street" value="" style="width:250px"></td>
+</tr> 
+<tr>
+<td class="abc1">自宅電話番号</td>
+<td>
+<input type="text" id="cl10" name="TelMain1" value="" maxlength="5" style="width:60px">
+-
+<input type="text" id="cl11" name="TelMain2" value="" maxlength="5" style="width:60px">
+-
+<input type="text" id="cl12" name="TelMain3" value="" maxlength="5" style="width:60px">
+</td>
+</tr> 
+<tr>
+<td class="abc1">携帯電話番号</td>
+<td>
+<input type="text" id="cl14" name="TelSelpfhone1" value="" maxlength="5" style="width:60px">
+-
+<input type="text" id="cl15" name="TelSelpfhone2" value="" maxlength="5" style="width:60px">
+-
+<input type="text" id="cl16" name="TelSelpfhone3" value="" maxlength="5" style="width:60px">
+</td>
+</tr>
+<tr> 
+<td class="abc1">PCメールアドレス</td> 
+<td><input type="text" id="cl09" name="MailPc" value="" >
+</td> 
+</tr>
+<tr>
+<td class="abc1">携帯メールアドレス</td>
+<td><input type="text" id="cl13" name="MailPass" value="" ></td>
+</tr>
+<tr>
+<td class="abc1">調査経験回数</td>
+<td>
+<select name="SurveyExperience" id="cl22" style="width:90px">
+<option value="" selected selected>選択しない</option>
+<option value="1" >0回</option>
+<option value="2" >1～5回</option>
+<option value="3" >6～10回</option>
+<option value="4" >11回以上</option>
+</select>
+</td>
+</tr>
+<tr>
+<td class="abc1">希望する調査</td>
+<td>
+<input type="checkbox" id="cl23" name="DesireSurvey" value="1" >交通量調査<br>
+<input type="checkbox" id="cl24" name="DesireSurvey" value="2" >走行調査<br>
+<input type="checkbox" id="cl25" name="DesireSurvey" value="3" >バス調査<br>
+<input type="checkbox" id="cl26" name="DesireSurvey" value="4" >アンケート配布<br>
+<input type="checkbox" id="cl27" name="DesireSurvey" value="5" >聞き取り調査<br>
+<input type="checkbox" id="cl28" name="DesireSurvey" value="6" >訪問調査<br>
+<input type="checkbox" id="cl29" name="DesireSurvey" value="7" >覆面調査(店舗チェック)<br>
+<input type="checkbox" id="cl30" name="DesireSurvey" value="8" >内勤スタッフ<br>
+</td>
+</tr>
+<tr>
+<td class="abc1">最寄SRC事務所</td>
+<td>
+<select name="NearestOffice" id="cl31">
+<option value=""  selected selected>選択しない</option>
+
+<option value="10" >北海道事務所</option>
+<option value="11" >北東北事務所</option>
+<option value="2" >東北事務所（仙台）</option>
+<option value="1" >本社（西日暮里）</option>
+<option value="3" >静岡事務所</option>
+<option value="4" >名古屋事務所</option>
+<option value="5" >大阪事務所</option>
+<option value="7" >広島事務所</option>
+<option value="6" >岡山事務所</option>
+<option value="9" >四国事務所</option>
+<option value="8" >九州事務所</option>
+<option value="12" >南九州事務所</option>
+<option value="13" >沖縄事務所</option>
+
+</select>
+</td>
+</tr>
+<tr>
+<td class="abc1">車の保有について</td>
+<td>
+<select name="PossessionCar" id="cl32">
+<option value="" selected selected>選択しない</option>-->
+<option value="1" >はい</option>
+<option value="2" >いいえ</option>
+</select>
+</td>
+</tr>
+<tr>
+<td class="abc1">自宅最寄り駅</td>
+<td><input type="text" id="cl35" name="NearestStation" value=""></td>
+</tr>
+<tr>
+<td class="abc1">認知経路</td>
+<td>
+<select name="CognitivePathway" id="cl33">
+<option value="0" >選択しない</option>
+<option value="1" >調査員説明会</option>
+<option value="2" >知人の紹介</option>
+<option value="3" >SRCWebサイト</option>
+<option value="4" >その他</option>
+</select>
+</td>
+</tr>
+<tr>
+<td class="abc1">認知経路 その他</td>
+<td><input type="text" id="cl34" name="CognitivePathwayOther" value="" ></td>
+</tr>
+
+<tr>
+<td class="abc1">パスワード</td>
+<td><input type="text" id="cl17" name="Password" value="" maxlength="20"></td> 
+</tr>
+
+</tbody>
+</table>
+
+<table class="ta1"> 
+<tbody>
+<tr align="center"> 
+<td><input type="submit" name="sub1" value="会員登録する" style="width:150px"></td>
+</tr> 
+</tbody>
+</table>
+</form>
+
+
+</p>
+</section>
+			
+</div>
+<!--/contents-->
+
+<div id="footer">
+<footer>
+<font color="white"><small>Copyright&copy; 2017 SURVEY RESEARCH CENTER CO., LTD. All Rights Reserved.</small></font>
+</footer>
+</div>
+
+</div>
+<!--/container-->
+
+</body>
+</html>

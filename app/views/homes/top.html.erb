@@ -1,138 +1,109 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>SRC調査員登録システム</title>
-<meta name="description" content="">
-<meta name="keywords" content="サーベイリサーチセンター,調査員登録システム,交通量調査">
-<meta name="viewport" content="width=device-width">
-
-<!--<script type="text/javascript" src="/0/tyousa_sys/js/footerFixed.js"></script>>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>SRC調査員登録システム</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="サーベイリサーチセンター,調査員登録システム,交通量調査">
+  <meta name="viewport" content="width=device-width">
+  <!--<script type="text/javascript" src="/0/tyousa_sys/js/footerFixed.js"></script>>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
-
 </head>
 <body>
-<div id="container">
-
-<header>
-<h1>ヘッダー</h1>
-</header>
-
-<div id="contents">
-
-<section>
-<h2>新規会員登録</h2><p>
-
-<script type="text/javascript">
-function clear(){
-    document.getElementById('cl00').value = '';
-    document.getElementById('cl01').value = '';
-    document.getElementById('cl02').value = '';
-    document.getElementById('cl03').value = '';
-    document.getElementById('cl04').value = '';
-    document.getElementById('cl05').value = '';
-    document.getElementById('cl06').value = '';
-    document.getElementById('cl07').value = '';
-    document.getElementById('cl08').value = '';
-    document.getElementById('cl09').value = '';
-    document.getElementById('cl10').value = '';
-    document.getElementById('cl11').value = '';
-    document.getElementById('cl12').value = '';
-    document.getElementById('cl13').value = '';
-    
-    document.getElementById('cl14').value = '';
-    document.getElementById('cl15').value = '';
-    document.getElementById('cl16').value = '';
-    document.getElementById('cl17').value = '';
-    document.getElementById('cl18').value = '';
-    document.getElementById('cl19').value = '';
-    document.getElementById('cl20').value = '';
-    
-    //ランクはない
-    //document.getElementById('cl21').value = '';
-    
-    document.getElementById('cl22').value = '';
-    
-    document.getElementById('cl23').checked = false;
-    document.getElementById('cl24').checked = false;
-    document.getElementById('cl25').checked = false;
-    document.getElementById('cl26').checked = false;
-    document.getElementById('cl27').checked = false;
-    document.getElementById('cl28').checked = false;
-    document.getElementById('cl29').checked = false;
-    document.getElementById('cl30').checked = false;
-    
-    document.getElementById('cl31').value = '';
-    document.getElementById('cl32').value = '';
-    document.getElementById('cl33').value = '';
-    document.getElementById('cl34').value = '';
-    document.getElementById('cl35').value = '';
-}
-</script>
-
-<!-- テスト用-->
-<div class="dropdown">
-  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </button>
-  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
-<!-- テスト用-->
-
-<form name="form1" method="post">
-
-<table class="ta1" border="1" cellpadding="5" width="90%"> 
-<tbody><tr>        
-<td class="abc1">姓（漢字）</td>
-<td><input type="text" id="cl00" name="NameFirst" value="" ></td> 
-</tr> 
-<tr>
-<td class="abc1">名（漢字）</td>
-<td><input type="text" id="cl03" name="NameLast" value="" ></td>
-</tr> 
-<tr>
-<td class="abc1">せい（ふりがな）</td>
-<td><input type="text" id="cl05" name="NameFirstRead" value="" ></td> 
-</tr>
-<tr>
-<td class="abc1">めい（ふりがな）</td>
-<td><input type="text" id="cl07" name="NameLastRead" value="" ></td> 
-</tr>
-<tr>
-<td class="abc1">性別</td>
-<td>
-<input name="Sex" id="sem1" type="radio" value="1" >
-<label for="sem1">男性</label>
-<input name="Sex" id="sem2" type="radio" value="2" >
-<label for="sem2">女性</label>
-</td>
-</tr>
-<tr>
-<td class="abc1">生年月日</td>
-<td>
-<input type="date" id="cl18" name="BirthDay" value=""  style="width:120px">
-</td>
-</tr>
-<tr>
-<td class="abc1">郵便番号</td>
-<td>
-    <input type="text" id="cl01" name="PostNumber1" value="" maxlength="3" style="width:80px">
-    &nbsp;-&nbsp;
-    <input type="text" id="cl02" name="PostNumber2" value="" maxlength="4" style="width:80px">
-</td>
-</tr>
-<tr>
-<td class="abc1">都道府県</td>
-<td>
-<select name="Prefecture" id="cl04">
+  <div id="container">
+    <header>
+      <h1>ヘッダー</h1>
+    </header>
+    <div id="contents">
+      <section>
+        <h2>新規会員登録</h2>
+        <p>
+          <script type="text/javascript">
+            function clear(){
+                document.getElementById('cl00').value = '';
+                document.getElementById('cl01').value = '';
+                document.getElementById('cl02').value = '';
+                document.getElementById('cl03').value = '';
+                document.getElementById('cl04').value = '';
+                document.getElementById('cl05').value = '';
+                document.getElementById('cl06').value = '';
+                document.getElementById('cl07').value = '';
+                document.getElementById('cl08').value = '';
+                document.getElementById('cl09').value = '';
+                document.getElementById('cl10').value = '';
+                document.getElementById('cl11').value = '';
+                document.getElementById('cl12').value = '';
+                document.getElementById('cl13').value = '';
+                
+                document.getElementById('cl14').value = '';
+                document.getElementById('cl15').value = '';
+                document.getElementById('cl16').value = '';
+                document.getElementById('cl17').value = '';
+                document.getElementById('cl18').value = '';
+                document.getElementById('cl19').value = '';
+                document.getElementById('cl20').value = '';
+                
+                //ランクはない
+                //document.getElementById('cl21').value = '';
+                
+                document.getElementById('cl22').value = '';
+                
+                document.getElementById('cl23').checked = false;
+                document.getElementById('cl24').checked = false;
+                document.getElementById('cl25').checked = false;
+                document.getElementById('cl26').checked = false;
+                document.getElementById('cl27').checked = false;
+                document.getElementById('cl28').checked = false;
+                document.getElementById('cl29').checked = false;
+                document.getElementById('cl30').checked = false;
+                
+                document.getElementById('cl31').value = '';
+                document.getElementById('cl32').value = '';
+                document.getElementById('cl33').value = '';
+                document.getElementById('cl34').value = '';
+                document.getElementById('cl35').value = '';
+                
+            }
+            console.log('javascript')
+          </script>
+          <form name="form1" method="post">
+            <table class="ta1" border="1" cellpadding="5" width="100%">
+              <tbody>
+                <tr>
+                  <td class="abc1">姓（漢字）</td>
+                  <td><input type="text" id="cl00" name="NameFirst" value=""></td>
+                </tr>
+                <tr>
+                  <td class="abc1">名（漢字）</td>
+                  <td><input type="text" id="cl03" name="NameLast" value=""></td>
+                </tr>
+                <tr>
+                  <td class="abc1">せい（ふりがな）</td>
+                  <td><input type="text" id="cl05" name="NameFirstRead" value=""></td>
+                </tr>
+                <tr>
+                  <td class="abc1">めい（ふりがな）</td>
+                  <td><input type="text" id="cl07" name="NameLastRead" value=""></td>
+                </tr>
+                <tr>
+                  <td class="abc1">性別</td>
+                  <td> <input name="Sex" id="sem1" type="radio" value="1"> <label for="sem1">男性</label> <input name="Sex" id="sem2" type="radio" value="2"> <label for="sem2">女性</label> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">生年月日</td>
+                  <td> <select id="select_year" name="BirthYear"><option value="" selected selected></option></select>年 <select id="select_month" name="BirthYear"><option value="" selected selected></select>月 <select id="select_day" name="BirthDay"><option value="" selected selected></select>日 </td>
+                </tr>
+                <tr>
+                  <td class="abc1">郵便番号</td>
+                  <td> <input type="text" id="cl01" name="PostNumber1" value="" maxlength="3" style="width:80px"> &nbsp;-&nbsp; <input type="text" id="cl02" name="PostNumber2" value="" maxlength="4" style="width:80px"> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">都道府県</td>
+                  <td> <select name="Prefecture" id="cl04">
 <option value="" selected selected>選択しない</option>
 <option value="1" >北海道</option>
 <option value="2" >青森県</option>
@@ -181,75 +152,49 @@ function clear(){
 <option value="45" >宮崎県</option>
 <option value="46" >鹿児島県</option>
 <option value="47" >沖縄県</option>
-</select>
-</td>
-</tr>
-<tr>
-<td class="abc1">市区町村名</td>
-<td><input type="text" id="cl06" name="Municipalities" value="" style="width:250px"></td>
-</tr>
-<tr>
-<td class="abc1">番地名</td>
-<td><input type="text" id="cl08" name="Street" value="" style="width:250px"></td>
-</tr> 
-<tr>
-<td class="abc1">自宅電話番号</td>
-<td>
-<input type="text" id="cl10" name="TelMain1" value="" maxlength="5" style="width:60px">
--
-<input type="text" id="cl11" name="TelMain2" value="" maxlength="5" style="width:60px">
--
-<input type="text" id="cl12" name="TelMain3" value="" maxlength="5" style="width:60px">
-</td>
-</tr> 
-<tr>
-<td class="abc1">携帯電話番号</td>
-<td>
-<input type="text" id="cl14" name="TelSelpfhone1" value="" maxlength="5" style="width:60px">
--
-<input type="text" id="cl15" name="TelSelpfhone2" value="" maxlength="5" style="width:60px">
--
-<input type="text" id="cl16" name="TelSelpfhone3" value="" maxlength="5" style="width:60px">
-</td>
-</tr>
-<tr> 
-<td class="abc1">PCメールアドレス</td> 
-<td><input type="text" id="cl09" name="MailPc" value="" >
-</td> 
-</tr>
-<tr>
-<td class="abc1">携帯メールアドレス</td>
-<td><input type="text" id="cl13" name="MailPass" value="" ></td>
-</tr>
-<tr>
-<td class="abc1">調査経験回数</td>
-<td>
-<select name="SurveyExperience" id="cl22" style="width:90px">
+</select> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">市区町村名</td>
+                  <td><input type="text" id="cl06" name="Municipalities" value="" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td class="abc1">番地名</td>
+                  <td><input type="text" id="cl08" name="Street" value="" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td class="abc1">自宅電話番号</td>
+                  <td> <input type="text" id="cl10" name="TelMain1" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl11" name="TelMain2" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl12" name="TelMain3" value="" maxlength="5" style="width:60px"> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">携帯電話番号</td>
+                  <td> <input type="text" id="cl14" name="TelSelpfhone1" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl15" name="TelSelpfhone2" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl16" name="TelSelpfhone3" value="" maxlength="5" style="width:60px"> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">PCメールアドレス</td>
+                  <td><input type="text" id="cl09" name="MailPc" value="" style="width:95%"> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">携帯メールアドレス</td>
+                  <td><input type="text" id="cl13" name="MailPass" value="" style="width:95%"></td>
+                </tr>
+                <tr>
+                  <td class="abc1">調査経験回数</td>
+                  <td> <select name="SurveyExperience" id="cl22" style="width:90px">
 <option value="" selected selected>選択しない</option>
 <option value="1" >0回</option>
 <option value="2" >1～5回</option>
 <option value="3" >6～10回</option>
 <option value="4" >11回以上</option>
-</select>
-</td>
-</tr>
-<tr>
-<td class="abc1">希望する調査</td>
-<td>
-<input type="checkbox" id="cl23" name="DesireSurvey" value="1" >交通量調査<br>
-<input type="checkbox" id="cl24" name="DesireSurvey" value="2" >走行調査<br>
-<input type="checkbox" id="cl25" name="DesireSurvey" value="3" >バス調査<br>
-<input type="checkbox" id="cl26" name="DesireSurvey" value="4" >アンケート配布<br>
-<input type="checkbox" id="cl27" name="DesireSurvey" value="5" >聞き取り調査<br>
-<input type="checkbox" id="cl28" name="DesireSurvey" value="6" >訪問調査<br>
-<input type="checkbox" id="cl29" name="DesireSurvey" value="7" >覆面調査(店舗チェック)<br>
-<input type="checkbox" id="cl30" name="DesireSurvey" value="8" >内勤スタッフ<br>
-</td>
-</tr>
-<tr>
-<td class="abc1">最寄SRC事務所</td>
-<td>
-<select name="NearestOffice" id="cl31">
+</select> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">希望する調査</td>
+                  <td> <input type="checkbox" id="cl23" name="DesireSurvey" value="1">交通量調査<br> <input type="checkbox" id="cl24" name="DesireSurvey" value="2">走行調査<br> <input type="checkbox" id="cl25" name="DesireSurvey" value="3">バス調査<br> <input type="checkbox" id="cl26" name="DesireSurvey" value="4">アンケート配布<br> <input type="checkbox" id="cl27" name="DesireSurvey" value="5">聞き取り調査<br> <input type="checkbox" id="cl28" name="DesireSurvey" value="6">訪問調査<br> <input type="checkbox" id="cl29" name="DesireSurvey" value="7">覆面調査(店舗チェック)<br> <input type="checkbox" id="cl30" name="DesireSurvey" value="8">内勤スタッフ<br> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">最寄SRC事務所</td>
+                  <td> <select name="NearestOffice" id="cl31">
 <option value=""  selected selected>選択しない</option>
 
 <option value="10" >北海道事務所</option>
@@ -266,72 +211,104 @@ function clear(){
 <option value="12" >南九州事務所</option>
 <option value="13" >沖縄事務所</option>
 
-</select>
-</td>
-</tr>
-<tr>
-<td class="abc1">車の保有について</td>
-<td>
-<select name="PossessionCar" id="cl32">
+</select> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">車の保有について</td>
+                  <td> <select name="PossessionCar" id="cl32">
 <option value="" selected selected>選択しない</option>-->
 <option value="1" >はい</option>
 <option value="2" >いいえ</option>
-</select>
-</td>
-</tr>
-<tr>
-<td class="abc1">自宅最寄り駅</td>
-<td><input type="text" id="cl35" name="NearestStation" value=""></td>
-</tr>
-<tr>
-<td class="abc1">認知経路</td>
-<td>
-<select name="CognitivePathway" id="cl33">
+</select> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">自宅最寄り駅</td>
+                  <td><input type="text" id="cl35" name="NearestStation" value=""></td>
+                </tr>
+                <tr>
+                  <td class="abc1">認知経路</td>
+                  <td> <select name="CognitivePathway" id="cl33">
 <option value="0" >選択しない</option>
 <option value="1" >調査員説明会</option>
 <option value="2" >知人の紹介</option>
 <option value="3" >SRCWebサイト</option>
 <option value="4" >その他</option>
-</select>
-</td>
-</tr>
-<tr>
-<td class="abc1">認知経路 その他</td>
-<td><input type="text" id="cl34" name="CognitivePathwayOther" value="" ></td>
-</tr>
-
-<tr>
-<td class="abc1">パスワード</td>
-<td><input type="text" id="cl17" name="Password" value="" maxlength="20"></td> 
-</tr>
-
-</tbody>
-</table>
-
-<table class="ta1"> 
-<tbody>
-<tr align="center"> 
-<td><input type="submit" name="sub1" value="会員登録する" style="width:150px"></td>
-</tr> 
-</tbody>
-</table>
-</form>
-
-
-</p>
-</section>
-			
-</div>
-<!--/contents-->
-
-<div id="footer">
-<footer>
-<font color="white"><small>Copyright&copy; 2017 SURVEY RESEARCH CENTER CO., LTD. All Rights Reserved.</small></font>
-</footer>
-</div>
-
-</div>
-<!--/container-->
-
+</select> </td>
+                </tr>
+                <tr>
+                  <td class="abc1">認知経路 その他</td>
+                  <td><input type="text" id="cl34" name="CognitivePathwayOther" value=""></td>
+                </tr>
+                <tr>
+                  <td class="abc1">パスワード</td>
+                  <td><input type="text" id="cl17" name="Password" value="" maxlength="20"></td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="ta1">
+              <tbody>
+                <tr align="center">
+                  <td style="width:150px; padding-top:15px; padding-bottom:15px;"><input type="submit" name="sub1" value="会員登録する" style="width:150px "></td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </p>
+      </section>
+    </div>
+    <!--/contents-->
+    <div id="footer">
+      <footer>
+        <font color="white"><small>Copyright&copy; 2017 SURVEY RESEARCH CENTER CO., LTD. All Rights Reserved.</small></font>
+      </footer>
+    </div>
+  </div>
+  <!--/container-->
+  <script type="text/javascript">
+    //生年月日設定用のjavascript
+      'use strict';
+    	
+      const select_year = document.getElementById('select_year');
+      const select_month = document.getElementById('select_month');
+      const select_day = document.getElementById('select_day');
+      let i;
+      var now = new Date();
+       
+      function $set_year(){
+        // 年を生成
+        for(i = now.getFullYear() - 100; i < now.getFullYear() + 1; i++){
+          let op = document.createElement('option');
+          op.value = i;
+          op.text = i;
+          select_year.appendChild(op);
+        }
+      }
+      
+      function $set_month(){
+        // 月を生成(12)
+        for(i = 1; i <= 12; i++){
+          let op = document.createElement('option');
+          op.value = i;
+          op.text = i;
+          select_month.appendChild(op);
+        }
+      }
+    
+      function $set_day(){
+          for (i = 1; i <= 31; i++) {
+            let op = document.createElement('option');
+            op.value = i;
+            op.text = i;
+            select_day.appendChild(op);
+          }
+      }
+    
+      // load時、年月変更時に実行する
+      window.onload = function(){
+        $set_year();
+        $set_month();
+        $set_day();
+      }
+  </script>
 </body>
 </html>

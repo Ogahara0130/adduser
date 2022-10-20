@@ -1,4 +1,4 @@
-@import "style"; 
+ @import "style"; 
 
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
@@ -13,6 +13,5 @@
  * It is generally better to create a new file per style scope.
  *= require_tree .
  *= require_self
+ *= require jquery.datetimepicker
  */
- 
- @import "application.bootstrap";

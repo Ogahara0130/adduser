@@ -72,3 +72,6 @@ group :test do
 end
 
 gem "cssbundling-rails"
+gem "jsbundling-rails"
+gem 'jquery-rails'
+gem 'jquery-datetimepicker-rails'

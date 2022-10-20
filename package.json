@@ -3,11 +3,16 @@
   "private": "true",
   "dependencies": {
     "@popperjs/core": "^2.11.6",
+    "autoprefixer": "^10.4.12",
     "bootstrap": "^5.2.2",
     "bootstrap-icons": "^1.9.1",
-    "sass": "^1.55.0"
+    "postcss": "^8.4.18",
+    "sass": "^1.55.0",
+    "tailwindcss": "^3.1.8"
   },
   "scripts": {
-    "build:css": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --load-path=node_modules"
+    "build": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --no-source-map --load-path=node_modules",
+    "build:css": "sass ./app/assets/stylesheets/application.scss:./app/assets/builds/application.css --no-source-map --no-source-map --load-path=node_modules",
+    "build_script": "yarn build:css && yarn build"
   }
 }

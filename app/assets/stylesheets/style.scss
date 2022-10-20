@@ -1,6 +1,390 @@
-.abc1 {
-    background-color: #efefff;
-    color: #24140e;
-    text-align: center;
-    font-size: 80%;
+@charset "utf-8";
+
+
+/*PC・タブレット・スマホ共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+html,body {min-height: 100%;}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #666;	/*全体の文字色*/
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 14px;	/*文字サイズ*/
+	/*line-height: 2;*/		/*行間*/
+	line-height: 2.8;		/*行間*/
+	-webkit-text-size-adjust: none;
+	background: #7117c4;	/*背景色（古いブラウザ用）*/
+	/*background: linear-gradient(#7117c4 150px, #fff 150px);*/	/*トップページ以外の背景設定。画面の上から150pxまでが#7117c4で、そこからすぐ#fffの白色に切り替える内容。*/
+	background: linear-gradient(#1fb06d 0px, #fff 60px);	/*トップページ以外の背景設定。画面の上から150pxまでが#7117c4で、そこからすぐ#fffの白色に切り替える内容
 }
+body#top {
+	background: linear-gradient(#7117c4 450px, #fff 450px);	/*トップページの背景設定。画面の上から450pxまでが#7117c4で、そこからすぐ#fffの白色に切り替える内容。*/
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
+ul {list-style-type: none;}
+ol {padding-left: 40px;padding-bottom: 15px;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {
+	border-collapse:
+	collapse;
+	/*font-size: 100%;*/
+	font-size: 95%;
+	border-spacing: 0;
+}
+iframe {width: 100%;}
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #666;	/*リンクテキストの色*/
+}
+dt {
+	
+}
+a:hover {
+	color: #7117c4;	/*マウスオン時の文字色*/
+}
+
+/*コンテナー（ホームページを囲む一番外側のブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: 98%;			/*ブロックの幅を画面の80%にする設定。*/
+	max-width: 600px;	/*上のwidth指定の追加設定。幅1000pxを最大幅に設定し、それ以上広げない。*/
+	margin: 0 auto;		/*HP画面の左右中央に表示させる設定*/
+}
+
+/*ヘッダー（ロゴが入った最上段のブロック）
+---------------------------------------------------------------------------*/
+/*headerブロック*/
+header {
+	text-align: center;		/*headerの中身をセンタリングさせる設定*/
+	/*height: 150px;*/		/*headerの高さ*/
+	/**height: 85px;*/		/*headerの高さ*/
+	height: 57px;
+	line-height: 57px;
+	
+	/*background: #7117c4;*/	/*headerの背景色*/
+	/*background: #1fb06d;*/
+	background: white;
+	border-radius: 5px 5px 5px 5px;
+	
+	/*ここで背景のベースカラーを指定する #e4ffe5*/
+	background-color: #d3ffd4;
+
+	/*ここでCSS3のグラデーションをつかってストライプのパターン・色を指定する
+	（※色を変える場合は#fffffffの部分を変更）*/
+	background-image: -webkit-gradient(linear, 0 0, 100% 100%,color-stop(.25, #ffffff), color-stop(.25, transparent),color-stop(.5, transparent), color-stop(.5, #ffffff),color-stop(.75, #ffffff), color-stop(.75, transparent),to(transparent));
+
+	/*ここでパターンの大きさを指定する
+	（※数字によってはストライプのグラデーションがずれるので注意）*/
+	-webkit-background-size: 7px 7px;
+		
+	/*margin-top: 6px;*/
+	margin-top: 2px;
+	
+}
+
+/*メニュー
+---------------------------------------------------------------------------*/
+/*メニュー全体を囲むブロック*/
+#menubar {
+	text-align: center;	/*文字をセンタリング*/
+	margin-top: 6px;
+}
+/*メニュー１個あたりの設定*/
+#menubar li {
+	display: inline;	/*横並びにする設定*/
+}
+#menubar li a {
+	text-decoration: none;
+	/*padding: 15px 30px;*/	/*各メニュー内の余白。上下に15px、左右に30pxあけるという意味。*/
+	padding: 10px 12px;
+	/*　color: #fff;  #ff007f*/	/*文字色*/
+	color: #ff6113;
+	font-weight: bold;
+	
+}
+/*マウスオン時の設定*/
+#menubar li a:hover {
+	/*background: url(../images/icon_arrow1.png) no-repeat center top;*/
+	background: url(../images/icon_arrow1.gif) no-repeat center top;	/*矢印アイコンを出す設定。矢印が不要ならここは丸ごと削除する。*/
+}
+
+/*マウスオン時の設定*/
+/*#menubar li input:hover {
+	/*background: url(../images/icon_arrow1.png) no-repeat center top;	/*background: white;	/*矢印アイコンを出す設定。矢印が不要ならここは丸ごと削除する。*/
+/*}＊*/
+
+
+/*コンテンツ（見出しバーや文字などが入っているブロック）
+---------------------------------------------------------------------------*/
+#contents {
+	/*background: #fff;*/	/*背景色*/
+	/*padding: 3%;*/		/*ボックス内の余白*/
+	padding: 1%;		/*ボックス内の余白*/
+}
+/*コンテンツのh2タグの設定*/
+#contents h2 {
+	clear: both;
+
+	/* //20170725追加*/
+	/* ///margin-top: 20px;*/
+	/* //margin-bottom: 15px;*/
+	margin-top: 5px;
+	margin-bottom: 10px;
+	color: #fff;		/*文字色*/
+	/*/padding: 5px 20px;/*/	/*上下、左右への余白*/
+	padding: 1px 20px;	/*上下、左右への余白*/
+
+	/*/background: #7117c4;/*/	/*背景色*/
+	background: #1fb06d;
+
+	border-radius: 2px 2px 2px 2px;
+}
+/*コンテンツのh3タグの設定*/
+#contents h3 {
+	clear: both;
+	/*/margin-bottom: 15px;/*/
+	margin-bottom: -2px;
+	/*/padding: 3px 20px;/*/	/*上下、左右への余白*/
+	padding: 0px 20px;	/*上下、左右への余白*/
+	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
+
+	border-radius: 1px 1px 1px 1px;
+}
+/*コンテンツのp(段落)タグ設定*/
+#contents p {
+	/*/padding: 0px 20px 14px;/*/	/*上、左右、下への余白*/
+	padding: 0px 20px 0px;	/*上、左右、下への余白*/
+}
+#contents h2 + p,
+#contents h3 + p {
+	/*/margin-top: -5px;/*/
+	margin-top: 0px;
+}
+
+/*SERVICEページ
+---------------------------------------------------------------------------*/
+/*各ブロックごとの設定*/
+.list {
+	overflow: hidden;
+	border-bottom: 1px solid #ccc;	/*下線の幅、線種、色*/
+	padding: 20px;	/*ボックス内の余白*/
+}
+/*h4見出しの設定*/
+.list h4 {
+	color: #7117c4;	/*文字色*/
+	font-size: 16px;	/*文字サイズ。少し大きくしています。*/
+}
+/*画像の設定*/
+.list img {
+	width: 20%;		/*画像幅*/
+	float: left;	/*画像を左に回り込み*/
+	margin-right: 3%	/*画像の右側に空けるスペース*/
+}
+.list p {
+	padding: 0 !important;
+}
+
+/*フッター(ページ最下部のcopyrightのパーツ)設定
+---------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	text-align: center;	/*文字をセンタリング*/
+	/*/padding: 20px 0px;/*/	/*左から、上下、左右への余白*/
+	padding: 7px 0px;	/*左から、上下、左右への余白*/
+
+	/*/background-color: #7117c4;/*/
+	background-color: #1fb06d;
+
+	border-radius: 2px 2px 2px 2px;
+}
+footer a {
+	text-decoration: none;
+	border: none;
+}
+footer .pr {
+	display: block;
+}
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+/*ブロック全体の設定*/
+#new dl {
+	padding-left: 20px;
+	margin-bottom: 15px;
+	margin-top: 7px;
+}
+/*日付設定*/
+#new dt {
+	font-weight: bold;	/*太字にする設定。標準がいいならこの行削除。*/
+	float: left;
+	width: 8em;
+}
+/*記事設定*/
+#new dd {
+	padding-left: 8em;
+}
+
+/*テーブル
+---------------------------------------------------------------------------*/
+/*tテーブルブロック設定*/
+.ta1 {
+	width: 100%;
+	/*/argin-bottom: 15px;/*/
+	margin-bottom: 5px;
+	border-color: #e4e2e1;
+}
+.ta1, .ta1 td, .ta1 th {
+	/*/border: 2px solid #000;/*/	/*テーブルの枠線の幅、線種、色*/
+	/*/padding: 10px;/*/			/*テーブル内の余白*/
+	word-break: break-all;
+}
+/*テーブル１行目に入った見出し部分*/
+.ta1 th.tamidashi {
+	width: auto;
+	text-align: left;	/*左よせ*/
+	background: #000;	/*背景色*/
+	color: #fff;	/*文字色*/
+}
+/*テーブルの左側ボックス*/
+.ta1 th {
+	width: 30%;	/*幅*/
+	text-align: center;	/*センタリング*/
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {background: #e5e5e5;padding: 5px 10px;border-radius: 4px;}
+.mb15,.mb1em {margin-bottom: 15px;}
+.color1 {color: #7117c4;}
+.pr {font-size: 10px;}
+
+
+
+/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:480px){
+
+/*コンテナー（ホームページを囲む一番外側のブロック）
+---------------------------------------------------------------------------*/
+#container {
+	width: 100%;	/*ブロックの幅を画面の100%にする設定。*/
+}
+
+/*メニュー
+---------------------------------------------------------------------------*/
+#menubar li a {
+	padding: 15px 10px;	/*各メニュー内の余白。上下に15px、左右に10pxあけるという意味。*/
+}
+
+/*トップページ内「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+#new h2.open {
+	background: #7117c4 url(../images/btn_minus.png) no-repeat right center/34px 34px;
+}
+#new h2.close {
+	background: #7117c4 url(../images/btn_plus.png) no-repeat right center/34px 34px;
+}
+
+/*テーブル
+---------------------------------------------------------------------------*/
+/*tテーブルブロック設定*/
+.ta1, .ta1 td, .ta1 th {
+	padding: 5px;			/*テーブル内の余白*/
+}
+
+}
+
+/***  現行から継承したスタイル ***/
+
+.captionBox {
+    background: #999999;
+    color: #FFFFFF;
+    font-weight: bold;
+    /*/padding: 4px 20px 4px 20px;/*/
+    padding: 2px 20px 2px 20px;
+}
+
+.bTxt01 {
+    padding: 4px 10px 4px 10px;
+    color: #333333;
+    background: #E0C1F0;
+    border: 1px solid #999999;
+}
+
+.entry-header {
+	display: none;
+}
+
+.menu_a {
+	text-decoration: none;
+	font-size:90%;
+	/*/color:#e73562;/*/
+	color:#6e4bf5;
+}
+
+.input_nav {
+	font-size: 11px;
+	color:tomato;
+}
+
+.glay_td{
+background-color:#eeeeee;
+color:#24140e;
+font-weight:bold;
+}
+
+.mailbody_td{
+background-color:#eeeeee;
+color:#24140e;
+font-weight:bold;
+text-align:center;
+width:22%;
+}
+
+.glay_td_2{
+background-color:#f2e5ff;
+color:#24140e;
+font-weight:bold;
+}
+
+.glay_td_3{
+background-color:#e5ffff;
+color:#24140e;
+font-weight:bold;
+}
+
+.glay_td_4{
+background-color:#fff4ea;
+color:#24140e;
+font-weight:bold;
+}
+
+.title_00{
+	background-color:#eeeeee;
+	color:#24140e;
+	font-weight:
+	bold;font-size:11px;
+}
+.table_data_mini{
+	color:black;
+	font-size:11px;
+}
+.table_data_mini_2{
+	color:black;
+	font-size:12px;
+}
+
+/****　クラスあべし　****/
+.abc1 { 
+	background-color:#f3f1f0;
+    border-color: white;
+	color:#24140e;
+	text-align: center;
+	font-size:95%;
+}
+/****　クラスあべし　****/

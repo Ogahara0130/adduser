@@ -23,51 +23,6 @@
         <h2>新規会員登録</h2>
         <p>
           <script type="text/javascript">
-            function clear(){
-                document.getElementById('cl00').value = '';
-                document.getElementById('cl01').value = '';
-                document.getElementById('cl02').value = '';
-                document.getElementById('cl03').value = '';
-                document.getElementById('cl04').value = '';
-                document.getElementById('cl05').value = '';
-                document.getElementById('cl06').value = '';
-                document.getElementById('cl07').value = '';
-                document.getElementById('cl08').value = '';
-                document.getElementById('cl09').value = '';
-                document.getElementById('cl10').value = '';
-                document.getElementById('cl11').value = '';
-                document.getElementById('cl12').value = '';
-                document.getElementById('cl13').value = '';
-                
-                document.getElementById('cl14').value = '';
-                document.getElementById('cl15').value = '';
-                document.getElementById('cl16').value = '';
-                document.getElementById('cl17').value = '';
-                document.getElementById('cl18').value = '';
-                document.getElementById('cl19').value = '';
-                document.getElementById('cl20').value = '';
-                
-                //ランクはない
-                //document.getElementById('cl21').value = '';
-                
-                document.getElementById('cl22').value = '';
-                
-                document.getElementById('cl23').checked = false;
-                document.getElementById('cl24').checked = false;
-                document.getElementById('cl25').checked = false;
-                document.getElementById('cl26').checked = false;
-                document.getElementById('cl27').checked = false;
-                document.getElementById('cl28').checked = false;
-                document.getElementById('cl29').checked = false;
-                document.getElementById('cl30').checked = false;
-                
-                document.getElementById('cl31').value = '';
-                document.getElementById('cl32').value = '';
-                document.getElementById('cl33').value = '';
-                document.getElementById('cl34').value = '';
-                document.getElementById('cl35').value = '';
-                
-            }
             console.log('javascript')
           </script>
           <form name="form1" method="post">
@@ -264,8 +219,8 @@
     </div>
   </div>
   <!--/container-->
-  <script type="text/javascript">
-    //生年月日設定用のjavascript
+<script type="text/javascript">
+      //生年月日設定用のjavascript
       'use strict';
     	
       const select_year = document.getElementById('select_year');
@@ -302,13 +257,54 @@
             select_day.appendChild(op);
           }
       }
+
+      function clear(){
+            document.getElementById('cl02').value = '';
+            document.getElementById('cl03').value = '';
+            document.getElementById('cl04').value = '';
+            document.getElementById('cl05').value = '';
+            document.getElementById('cl06').value = '';
+            document.getElementById('cl07').value = '';
+            document.getElementById('cl08').value = '';
+            document.getElementById('cl09').value = '';
+            document.getElementById('cl10').value = '';
+            document.getElementById('cl11').value = '';
+            document.getElementById('cl12').value = '';
+            document.getElementById('cl13').value = '';
+                
+            document.getElementById('cl14').value = '';
+            document.getElementById('cl15').value = '';
+            document.getElementById('cl16').value = '';
+            document.getElementById('cl17').value = '';
+                                
+            //ランクはない
+            //document.getElementById('cl21').value = '';
+                
+            document.getElementById('cl22').value = '';
+                
+            document.getElementById('cl23').checked = false;
+            document.getElementById('cl24').checked = false;
+            document.getElementById('cl25').checked = false;
+            document.getElementById('cl26').checked = false;
+            document.getElementById('cl27').checked = false;
+            document.getElementById('cl28').checked = false;
+            document.getElementById('cl29').checked = false;
+            document.getElementById('cl30').checked = false;
+                
+            document.getElementById('cl31').value = '';
+            document.getElementById('cl32').value = '';
+            document.getElementById('cl33').value = '';
+            document.getElementById('cl34').value = '';
+            document.getElementById('cl35').value = '';   
+      }
     
-      // load時、年月変更時に実行する
+      // load時に実行する。
       window.onload = function(){
         $set_year();
         $set_month();
         $set_day();
+        clear();
       }
-  </script>
+</script>
 </body>
 </html>

@@ -236,7 +236,6 @@ footer .pr {
 	width: 100%;
 	/*/argin-bottom: 15px;/*/
 	margin-bottom: 5px;
-	border-color: #e4e2e1;
 }
 .ta1, .ta1 td, .ta1 th {
 	/*/border: 2px solid #000;/*/	/*テーブルの枠線の幅、線種、色*/
@@ -381,6 +380,7 @@ font-weight:bold;
 
 /****　クラスあべし　****/
 .abc1 { 
+	border: solid 1px;
 	background-color:#f3f1f0;
     border-color: white;
 	color:#24140e;
@@ -389,3 +389,10 @@ font-weight:bold;
 	width: 35%;
 }
 /****　クラスあべし　****/
+
+/****　クラスあべし2　****/
+.abc2 { 
+	border: solid 1px;
+    border-color: #e4e2e1;
+}
+/****　クラスあべし2　****/

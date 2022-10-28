@@ -6,7 +6,7 @@ one:
   name_first_read: MyString
   name_last_read: MyString
   sex: MyString
-  birthday: 2022-10-24
+  birthday: 2022-10-28
   postnumber: MyString
   prefecture: MyString
   municipalities: MyString
@@ -16,7 +16,14 @@ one:
   mail_pc: MyString
   mail_pass: MyString
   survey_experience: MyString
-  desire_survey: MyString
+  traffic_survey: false
+  driving_survey: false
+  bus_survey: false
+  questionnaire_distribution: false
+  interview_survey: false
+  visit_survey: false
+  undercover_investigation: false
+  office_staff: false
   nearest_office: MyString
   possession_car: MyString
   nearest_station: MyString
@@ -30,7 +37,7 @@ two:
   name_first_read: MyString
   name_last_read: MyString
   sex: MyString
-  birthday: 2022-10-24
+  birthday: 2022-10-28
   postnumber: MyString
   prefecture: MyString
   municipalities: MyString
@@ -40,7 +47,14 @@ two:
   mail_pc: MyString
   mail_pass: MyString
   survey_experience: MyString
-  desire_survey: MyString
+  traffic_survey: false
+  driving_survey: false
+  bus_survey: false
+  questionnaire_distribution: false
+  interview_survey: false
+  visit_survey: false
+  undercover_investigation: false
+  office_staff: false
   nearest_office: MyString
   possession_car: MyString
   nearest_station: MyString

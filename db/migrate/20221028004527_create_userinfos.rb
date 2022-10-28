@@ -1,5 +1,7 @@
 class CreateUserinfos < ActiveRecord::Migration[7.0]
   def change
+    drop_table :userinfos
+
     create_table :userinfos do |t|
       t.string :name_first
       t.string :name_last
@@ -16,7 +18,14 @@ class CreateUserinfos < ActiveRecord::Migration[7.0]
       t.string :mail_pc
       t.string :mail_pass
       t.string :survey_experience
-      t.string :desire_survey
+      t.boolean :traffic_survey
+      t.boolean :driving_survey
+      t.boolean :bus_survey
+      t.boolean :questionnaire_distribution
+      t.boolean :interview_survey
+      t.boolean :visit_survey
+      t.boolean :undercover_investigation
+      t.boolean :office_staff
       t.string :nearest_office
       t.string :possession_car
       t.string :nearest_station

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_10_24_033656) do
+ActiveRecord::Schema[7.0].define(version: 2022_10_28_004527) do
   create_table "userinfos", force: :cascade do |t|
     t.string "name_first"
     t.string "name_last"
@@ -27,7 +27,14 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_24_033656) do
     t.string "mail_pc"
     t.string "mail_pass"
     t.string "survey_experience"
-    t.string "desire_survey"
+    t.boolean "traffic_survey"
+    t.boolean "driving_survey"
+    t.boolean "bus_survey"
+    t.boolean "questionnaire_distribution"
+    t.boolean "interview_survey"
+    t.boolean "visit_survey"
+    t.boolean "undercover_investigation"
+    t.boolean "office_staff"
     t.string "nearest_office"
     t.string "possession_car"
     t.string "nearest_station"

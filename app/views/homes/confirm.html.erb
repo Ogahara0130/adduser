@@ -23,109 +23,168 @@
         <h2>確認画面</h2>
         <div>以下の入力情報で会員登録します。宜しいでしょうか？</div>
         <p>
-          <form name="form1" method="post">
-            <table class="ta1" border="1" cellpadding="5" width="100%">
-              <tbody>
-                <tr>
-                  <td class="abc1">姓（漢字）</td>
-                  <td class="abc2"><div id="cl00" name="NameFirst" value=""></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">名（漢字）</td>
-                  <td class="abc2"><div id="cl03" name="NameLast" value=""></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">せい（ふりがな）</td>
-                  <td class="abc2"><div id="cl05" name="NameFirstRead" value=""></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">めい（ふりがな）</td>
-                  <td class="abc2"><div id="cl07" name="NameLastRead" value=""></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">性別</td>
-                  <td class="abc2"> <div name="Sex" id="sem1" value=""></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">生年月日</td>
-                  <td class="abc2"> <span id="select_year" name="BirthYear">年</span><span id="select_month" name="BirthYear">月</span><span id="select_day" name="BirthDay">日</span></td>
-                </tr>
-                <tr>
-                  <td class="abc1">郵便番号</td>
-                  <td class="abc2"> <div id="cl01" name="PostNumber1" value="" maxlength="3" style="width:80px"> &nbsp;-&nbsp; <div id="cl02" name="PostNumber2" value="" maxlength="4" style="width:80px"> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">都道府県</td>
-                  <td class="abc2"> <div name="Prefecture" id="cl04">
-</div> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">市区町村名</td>
-                  <td class="abc2"><div id="cl06" name="Municipalities" value="" style="width:95%"></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">番地名</td>
-                  <td class="abc2"><div id="cl08" name="Street" value="" style="width:95%"></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">自宅電話番号</td>
-                  <td class="abc2"> <span id="cl10" name="TelMain1" value="" maxlength="5" style="width:60px"></span> - <span id="cl11" name="TelMain2" value="" maxlength="5" style="width:60px"></span> - <span id="cl12" name="TelMain3" value="" maxlength="5" style="width:60px"></span> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">携帯電話番号</td>
-                  <td class="abc2"> <span id="cl14" name="TelSelpfhone1" value="" maxlength="5" style="width:60px"></span> - <span id="cl15" name="TelSelpfhone2" value="" maxlength="5" style="width:60px"></span> - <span id="cl16" name="TelSelpfhone3" value="" maxlength="5" style="width:60px"></span> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">PCメールアドレス</td>
-                  <td class="abc2"><div id="cl09" name="MailPc" value="" style="width:95%"> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">携帯メールアドレス</td>
-                  <td class="abc2"><div id="cl13" name="MailPass" value="" style="width:95%"></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">調査経験回数</td>
-                  <td class="abc2"> <div name="SurveyExperience" id="cl22" style="width:90px"></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">希望する調査</td>
-                  <td class="abc2"> <div id="cl23" name="DesireSurvey" value=""><div> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">最寄SRC事務所</td>
-                  <td class="abc2"> <div name="NearestOffice" id="cl31"></div> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">車の保有について</td>
-                  <td class="abc2"> <div name="PossessionCar" id="cl32"></div> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">自宅最寄り駅</td>
-                  <td class="abc2"><div id="cl35" name="NearestStation" value=""></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">認知経路</td>
-                  <td class="abc2"> <div name="CognitivePathway" id="cl33"></div> </td>
-                </tr>
-                <tr>
-                  <td class="abc1">認知経路 その他</td>
-                  <td class="abc2"><div id="cl34" name="CognitivePathwayOther" value=""></div></td>
-                </tr>
-                <tr>
-                  <td class="abc1">パスワード</td>
-                  <td class="abc2"><div id="cl17" name="Password" value="" maxlength="20"></div></td>
-                </tr>
-              </tbody>
-            </table>
-            <table class="ta1">
-              <tbody>
-                <tr align="center">
-                <td style="width:150px; padding-top:15px; padding-bottom:15px;"><input type="submit" name="edit" value="修正する" style="width:150px "></td>
-                  <td style="width:150px; padding-top:15px; padding-bottom:15px;"><input type="submit" name="sub1" value="登録する" style="width:150px "></td>
-                </tr>
-              </tbody>
-            </table>
-          </form>
+          <table class="ta1" border="1" cellpadding="5" width="100%">
+            <tbody>
+              <tr>
+                <td class="abc1">姓（漢字）</td>
+                <td class="abc2"><%= @userinfos.name_first %></td>
+              </tr>
+              <tr>
+                <td class="abc1">名（漢字）</td>
+                <td class="abc2"><%= @userinfos.name_last %></td>
+              </tr>
+              <tr>
+                <td class="abc1">せい（ふりがな）</td>
+                <td class="abc2"><%= @userinfos.name_first_read %></td>
+              </tr>
+              <tr>
+                <td class="abc1">めい（ふりがな）</td>
+                <td class="abc2"><%= @userinfos.name_last_read %></td>
+              </tr>
+              <tr>
+                <td class="abc1">性別</td>
+                <td class="abc2"><%= @userinfos.sex %></td>
+              </tr>
+              <tr>
+                <td class="abc1">生年月日</td>
+                <td class="abc2"><%= @userinfos.birthday.strftime("%Y/%m/%d") %></td>
+              </tr>
+              <tr>
+                <td class="abc1">郵便番号</td>
+                <td class="abc2"><%= @userinfos.postnumber %></td>
+              </tr>
+              <tr>
+                <td class="abc1">都道府県</td>
+                <td class="abc2"><%= @userinfos.prefecture %></td>
+              </tr>
+              <tr>
+                <td class="abc1">市区町村名</td>
+                <td class="abc2"><%= @userinfos.municipalities %></td>
+              </tr>
+              <tr>
+                <td class="abc1">番地名</td>
+                <td class="abc2"><%= @userinfos.street %></td>
+              </tr>
+              <tr>
+                <td class="abc1">自宅電話番号</td>
+                <td class="abc2"><%= @userinfos.tel_main %></td>
+              </tr>
+              <tr>
+                <td class="abc1">携帯電話番号</td>
+                <td class="abc2"><%= @userinfos.tel_selpfhone %></td>
+              </tr>
+              <tr>
+                <td class="abc1">PCメールアドレス</td>
+                <td class="abc2"><%= @userinfos.mail_pc %></td>
+              </tr>
+              <tr>
+                <td class="abc1">携帯メールアドレス</td>
+                <td class="abc2"><%= @userinfos.mail_pass %></td>
+              </tr>
+              <tr>
+                <td class="abc1">調査経験回数</td>
+                <td class="abc2"><%= @userinfos.survey_experience %></td>
+              </tr>
+              <tr>
+                <td class="abc1">希望する調査</td>
+                <td class="abc2"><div id="desire_survey"></div></td>
+              </tr>
+              <tr>
+                <td class="abc1">最寄SRC事務所</td>
+                <td class="abc2"><%= @userinfos.nearest_office %></td>
+              </tr>
+              <tr>
+                <td class="abc1">車の保有について</td>
+                <td class="abc2"><%= @userinfos.possession_car %></td>
+              </tr>
+              <tr>
+                <td class="abc1">自宅最寄り駅</td>
+                <td class="abc2"><%= @userinfos.nearest_station %></td>
+              </tr>
+              <tr>
+                <td class="abc1">認知経路</td>
+                <td class="abc2"><%= @userinfos.cognitive_pathway %></td>
+              </tr>
+              <tr>
+                <td class="abc1">認知経路 その他</td>
+                <td class="abc2"><%= @userinfos.cognitive_pathway_other %></td>
+              </tr>
+              <tr>
+                <td class="abc1">パスワード</td>
+                <td class="abc2"><%= @userinfos.password %></td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="ta1">
+            <tbody>
+              <tr align="center">
+              <%= form_for(@userinfos, url: back_path) do |f| %>
+                <%= f.hidden_field :name_last %>
+                <%= f.hidden_field :name_first_read %>
+                <%= f.hidden_field :name_last_read %>
+                <%= f.hidden_field :sex %>
+                <%= f.hidden_field :birthday %>
+                <%= f.hidden_field :postnumber %>
+                <%= f.hidden_field :prefecture %>
+                <%= f.hidden_field :municipalities %>
+                <%= f.hidden_field :street %>
+                <%= f.hidden_field :tel_main %>
+                <%= f.hidden_field :tel_selpfhone %>
+                <%= f.hidden_field :mail_pc %>
+                <%= f.hidden_field :mail_pass %>
+                <%= f.hidden_field :survey_experience %>
+                <%= f.hidden_field :traffic_survey %>
+                <%= f.hidden_field :driving_survey %>
+                <%= f.hidden_field :bus_survey %>
+                <%= f.hidden_field :questionnaire_distribution %>
+                <%= f.hidden_field :interview_survey %>
+                <%= f.hidden_field :visit_survey %>
+                <%= f.hidden_field :undercover_investigation %>
+                <%= f.hidden_field :office_staff %>
+                <%= f.hidden_field :nearest_office %>
+                <%= f.hidden_field :possession_car %>
+                <%= f.hidden_field :nearest_station %>
+                <%= f.hidden_field :cognitive_pathway %>
+                <%= f.hidden_field :cognitive_pathway_other %>
+                <%= f.hidden_field :password %>
+                <%= f.hidden_field :name_first %>
+                <td style="width:150px; padding-top:15px; padding-bottom:15px;"><%= f.submit "修正する", style: "width:150px" %></td>
+              <% end %>
+              <%= form_for(@userinfos, url: confirm_path) do |f| %>
+                <%= f.hidden_field :name_last %>
+                <%= f.hidden_field :name_first_read %>
+                <%= f.hidden_field :name_last_read %>
+                <%= f.hidden_field :sex %>
+                <%= f.hidden_field :birthday %>
+                <%= f.hidden_field :postnumber %>
+                <%= f.hidden_field :prefecture %>
+                <%= f.hidden_field :municipalities %>
+                <%= f.hidden_field :street %>
+                <%= f.hidden_field :tel_main %>
+                <%= f.hidden_field :tel_selpfhone %>
+                <%= f.hidden_field :mail_pc %>
+                <%= f.hidden_field :mail_pass %>
+                <%= f.hidden_field :survey_experience %>
+                <%= f.hidden_field :traffic_survey %>
+                <%= f.hidden_field :driving_survey %>
+                <%= f.hidden_field :bus_survey %>
+                <%= f.hidden_field :questionnaire_distribution %>
+                <%= f.hidden_field :interview_survey %>
+                <%= f.hidden_field :visit_survey %>
+                <%= f.hidden_field :undercover_investigation %>
+                <%= f.hidden_field :office_staff %>
+                <%= f.hidden_field :nearest_office %>
+                <%= f.hidden_field :possession_car %>
+                <%= f.hidden_field :nearest_station %>
+                <%= f.hidden_field :cognitive_pathway %>
+                <%= f.hidden_field :cognitive_pathway_other %>
+                <%= f.hidden_field :password %>
+                <%= f.hidden_field :name_first %>
+                <td style="width:150px; padding-top:15px; padding-bottom:15px;"><%= f.submit "登録する", style: "width:150px" %></td>
+              <% end %>
+              </tr>
+            </tbody>
+          </table>
         </p>
       </section>
     </div>
@@ -138,7 +197,22 @@
   </div>
   <!--/container-->
 <script type="text/javascript">
- <!--/script-->
+  //load時に実行する。
+  window.onload = function(){
+    //希望する調査に文字列をセット
+    let desire_survey_str = "";
+
+    if(document.getElementById("userinfo_traffic_survey").value == "true") desire_survey_str = desire_survey_str + "交通量調査" + '<br>';
+    if(document.getElementById("userinfo_driving_survey").value == "true") {desire_survey_str = desire_survey_str + "走行調査" + '<br>';}
+    if(document.getElementById("userinfo_bus_survey").value == "true") {desire_survey_str = desire_survey_str + "バス調査" + '<br>';}
+    if(document.getElementById("userinfo_questionnaire_distribution").value == "true") {desire_survey_str = desire_survey_str + "アンケート配布" + '<br>';}
+    if(document.getElementById("userinfo_interview_survey").value == "true") {desire_survey_str = desire_survey_str + "聞き取り調査" + '<br>';}
+    if(document.getElementById("userinfo_visit_survey").value == "true") {desire_survey_str = desire_survey_str + "訪問調査" + '<br>';}
+    if(document.getElementById("userinfo_undercover_investigation").value == "true") {desire_survey_str = desire_survey_str + "覆面調査(店舗チェック)" + '<br>';}
+    if(document.getElementById("userinfo_office_staff").value == "true") {desire_survey_str = desire_survey_str + "内勤スタッフ" + '<br>';}
+
+    document.getElementById("desire_survey").innerHTML = desire_survey_str;
+  }
 </script>
 </body>
 </html>

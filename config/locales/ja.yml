@@ -1,0 +1,37 @@
+ja:
+
+  activerecord:
+    models:
+      userinfo: "ユーザー"
+    attributes:
+      userinfo:
+        name_first: "姓（漢字）"
+        name_last: "名（漢字）"
+        name_first_read: "せい（ふりがな）"
+        name_last_read: "めい（ふりがな）"
+        sex: "性別"
+        birthday: "生年月日"
+        postnumber: "郵便番号"
+        prefecture: "都道府県"
+        municipalities: "市区町村名"
+        street: "番地名"
+        tel_main: "自宅電話番号"
+        tel_selpfhone: "携帯電話番号"
+        mail_pc: "PCメールアドレス"
+        mail_pass: "携帯メールアドレス"
+        survey_experience: "調査経験回数"
+        desire_survey_check: "希望する調査"
+        traffic_survey: "交通量調査"
+        driving_survey: "走行調査"
+        bus_survey: "バス調査"
+        questionnaire_distribution: "アンケート配布"
+        interview_survey: "聞き取り調査"
+        visit_survey: "訪問調査"
+        undercover_investigation: "覆面調査(店舗チェック)"
+        office_staff: "内勤スタッフ"
+        nearest_office: "最寄SRC事務所"
+        possession_car: "車の保有について"
+        nearest_station: "自宅最寄り駅"
+        cognitive_pathway: "認知経路"
+        cognitive_pathway_other: "認知経路その他"
+        password: "パスワード"

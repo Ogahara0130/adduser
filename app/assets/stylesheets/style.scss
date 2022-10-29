@@ -148,7 +148,6 @@ header {
 #contents h3 {
 	clear: both;
 	/*/margin-bottom: 15px;/*/
-	margin-bottom: -2px;
 	/*/padding: 3px 20px;/*/	/*上下、左右への余白*/
 	padding: 0px 20px;	/*上下、左右への余白*/
 	border: 1px solid #ccc;	/*枠線の幅、線種、色*/
@@ -403,3 +402,21 @@ font-weight:bold;
 #userinfo_mail_pass {
 	width:95%
 }
+
+/***  エラー出力の設定 ***/
+.errmsg h3 { 
+	color: red;
+	background-color: #ffd4df;
+	margin-bottom: 5px;
+}
+
+.errmsg li { 
+	color: red;
+	line-height: 2;
+}
+
+.field_with_errors { 
+	display: inline-block; 
+	_display: inline;
+}
+/***  エラー出力の設定 ***/

@@ -5,5 +5,6 @@ Rails.application.routes.draw do
 
   get 'top' => 'homes#top'
   post 'back' => 'homes#back'
+  post 'create' => 'homes#create'
   post 'confirm' => 'homes#confirm'
 end

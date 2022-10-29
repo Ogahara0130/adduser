@@ -75,3 +75,4 @@ gem "cssbundling-rails"
 gem "jsbundling-rails"
 gem 'jquery-rails'
 gem 'jquery-datetimepicker-rails'
+gem 'rails-i18n'

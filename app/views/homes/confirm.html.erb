@@ -150,7 +150,7 @@
                 <%= f.hidden_field :name_first %>
                 <td style="width:150px; padding-top:15px; padding-bottom:15px;"><%= f.submit "修正する", style: "width:150px" %></td>
               <% end %>
-              <%= form_for(@userinfos, url: confirm_path) do |f| %>
+              <%= form_for(@userinfos, url: create_path) do |f| %>
                 <%= f.hidden_field :name_last %>
                 <%= f.hidden_field :name_first_read %>
                 <%= f.hidden_field :name_last_read %>

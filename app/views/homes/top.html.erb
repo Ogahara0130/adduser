@@ -22,6 +22,16 @@
       <section>
         <h2>新規会員登録</h2>
         <p>
+          <div class = "errmsg">
+          <% if @userinfos.errors.any? %>
+          <h3>入力した内容にエラーが<%= @userinfos.errors.count %>件あります</h3>
+          <ul>
+            <% @userinfos.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+          </div>
+          <% end %>
           <%= form_for(@userinfos, url: confirm_path) do |f| %>
             <table class="ta1" border="1" cellpadding="5" width="100%">
               <tbody>
@@ -143,7 +153,7 @@
                 <tr>
                   <td class="abc1">調査経験回数</td>
                   <td class="abc2">
-                    <%= f.select :survey_experience, {'0回': 1, '1～5回': 2, '6～10回': 3, '11回': 4}, { include_blank: '選択しない'}, {required: true } %>
+                    <%= f.select :survey_experience, {'0回': 1, '1～5回': 2, '6～10回': 3, '11回': 4}, { include_blank: '選択しない'} %>
                   </td>
                 </tr>
                 <tr>
@@ -179,12 +189,12 @@
                   <td class="abc1">最寄SRC事務所</td>
                   <td class="abc2"> 
                     <%= f.select :nearest_office, {'北海道事務所': 10, '北東北事務所': 11, '東北事務所（仙台）': 2, '本社（西日暮里）': 1, '静岡事務所': 1, '名古屋事務所': 4, '大阪事務所': 5,
-                                                    '広島事務所': 7, '岡山事務所': 6, '四国事務所': 9, '九州事務所': 8, '南九州事務所': 12, '沖縄事務所': 13}, { include_blank: '選択しない'}, {required: true } %>
+                                                    '広島事務所': 7, '岡山事務所': 6, '四国事務所': 9, '九州事務所': 8, '南九州事務所': 12, '沖縄事務所': 13}, { include_blank: '選択しない'} %>
                 </td>
                 </tr>
                 <tr>
                   <td class="abc1">車の保有について</td>
-                  <td class="abc2"><%= f.select :possession_car, {'はい': 1, 'いいえ': 2}, {include_blank: '選択しない'}, {required: true } %>
+                  <td class="abc2"><%= f.select :possession_car, {'はい': 1, 'いいえ': 2}, {include_blank: '選択しない'} %>
                   </td>
                 </tr>
                 <tr>
@@ -194,7 +204,7 @@
                 <tr>
                   <td class="abc1">認知経路</td>
                   <td class="abc2">
-                  <%= f.select :cognitive_pathway, {'調査員説明会': 1, '知人の紹介': 2, 'SRCWebサイト': 3, 'その他': 4}, {include_blank: '選択しない'}, {required: true } %>
+                  <%= f.select :cognitive_pathway, {'調査員説明会': 1, '知人の紹介': 2, 'SRCWebサイト': 3, 'その他': 4}, {include_blank: '選択しない'} %>
                   </td>
                 </tr>
                 <tr>
@@ -334,7 +344,7 @@
         }
 
         //確認画面で修正ボタンを押された際に実行する。
-        if(location.pathname == "/back"){
+        if(location.pathname == "/back" || location.pathname == "/confirm"){
           var birthday = document.getElementById("userinfo_birthday").value;
           var birthday_arr = birthday.split("/");
           document.getElementById("select_year").value = birthday_arr[0];

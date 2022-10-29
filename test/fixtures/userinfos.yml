@@ -1,0 +1,63 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name_first: MyString
+  name_last: MyString
+  name_first_read: MyString
+  name_last_read: MyString
+  sex: MyString
+  birthday: 2022-10-28
+  postnumber: MyString
+  prefecture: MyString
+  municipalities: MyString
+  street: MyString
+  tel_main: MyString
+  tel_selpfhone: MyString
+  mail_pc: MyString
+  mail_pass: MyString
+  survey_experience: MyString
+  traffic_survey: false
+  driving_survey: false
+  bus_survey: false
+  questionnaire_distribution: false
+  interview_survey: false
+  visit_survey: false
+  undercover_investigation: false
+  office_staff: false
+  nearest_office: MyString
+  possession_car: MyString
+  nearest_station: MyString
+  cognitive_pathway: MyString
+  cognitive_pathway_other: MyString
+  password: MyString
+
+two:
+  name_first: MyString
+  name_last: MyString
+  name_first_read: MyString
+  name_last_read: MyString
+  sex: MyString
+  birthday: 2022-10-28
+  postnumber: MyString
+  prefecture: MyString
+  municipalities: MyString
+  street: MyString
+  tel_main: MyString
+  tel_selpfhone: MyString
+  mail_pc: MyString
+  mail_pass: MyString
+  survey_experience: MyString
+  traffic_survey: false
+  driving_survey: false
+  bus_survey: false
+  questionnaire_distribution: false
+  interview_survey: false
+  visit_survey: false
+  undercover_investigation: false
+  office_staff: false
+  nearest_office: MyString
+  possession_car: MyString
+  nearest_station: MyString
+  cognitive_pathway: MyString
+  cognitive_pathway_other: MyString
+  password: MyString

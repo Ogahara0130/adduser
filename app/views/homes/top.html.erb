@@ -16,7 +16,7 @@
 <body>
   <div id="container">
     <header>
-      <h1>ヘッダー</h1>
+      <h1>SRC調査員登録システム</h1>
     </header>
     <div id="contents">
       <section>
@@ -36,23 +36,23 @@
             <table class="ta1" border="1" cellpadding="5" width="100%">
               <tbody>
                 <tr>
-                  <td class="abc1">姓（漢字）</td>
+                  <td class="abc1">姓（漢字）<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.text_field :name_first %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">名（漢字）</td>
+                  <td class="abc1">名（漢字）<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.text_field :name_last %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">せい（ふりがな）</td>
+                  <td class="abc1">せい（ふりがな）<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.text_field :name_first_read %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">めい（ふりがな）</td>
+                  <td class="abc1">めい（ふりがな）<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.text_field :name_last_read %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">性別</td>
+                  <td class="abc1">性別<span class="required">(必須)</span></td>
                   <td class="abc2">
                   <%= f.radio_button :sex, 1 %>
                   <%= f.label :sex, "男性"%>
@@ -61,17 +61,17 @@
                   </td>
                 </tr>
                 <tr>
-                  <td class="abc1">生年月日</td>
+                  <td class="abc1">生年月日<span class="required">(必須)</span></td>
                   <td class="abc2"> <select id="select_year" name="BirthYear"><option value="" selected selected></option></select>年 <select id="select_month" name="BirthYear"><option value="" selected selected></select>月 <select id="select_day" name="BirthDay"><option value="" selected selected></select>日 </td>
                   <%= f.hidden_field :birthday %>
                 </tr>
                 <tr>
-                  <td class="abc1">郵便番号</td>
-                  <td class="abc2"> <input type="text" id="cl01" name="PostNumber1" value="" maxlength="3" style="width:80px"> &nbsp;-&nbsp; <input type="text" id="cl02" name="PostNumber2" value="" maxlength="4" style="width:80px"> </td>
+                  <td class="abc1">郵便番号<span class="required">(必須)</span></td>
+                  <td class="abc2"> <input type="tel" id="cl01" name="PostNumber1" value="" maxlength="3" style="width:80px"> &nbsp;-&nbsp; <input type="tel" id="cl02" name="PostNumber2" value="" maxlength="4" style="width:80px"> </td>
                   <%= f.hidden_field :postnumber %>
                 </tr>
                 <tr>
-                  <td class="abc1">都道府県</td>
+                  <td class="abc1">都道府県<span class="required">(必須)</span></td>
                   <td class="abc2"> <select name="Prefecture" id="cl04">
                   <option value="" selected selected>選択しない</option>
                   <option value="1" >北海道</option>
@@ -125,39 +125,39 @@
                   <%= f.hidden_field :prefecture %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">市区町村名</td>
+                  <td class="abc1">市区町村名<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.text_field :municipalities %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">番地名</td>
+                  <td class="abc1">番地名<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.text_field :street %></td>
                 </tr>
                 <tr>
                   <td class="abc1">自宅電話番号</td>
-                  <td class="abc2"> <input type="text" id="cl10" name="TelMain1" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl11" name="TelMain2" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl12" name="TelMain3" value="" maxlength="5" style="width:60px"> </td>
+                  <td class="abc2"> <input type="tel" id="cl10" name="TelMain1" value="" maxlength="5" style="width:60px"> - <input type="tel" id="cl11" name="TelMain2" value="" maxlength="5" style="width:60px"> - <input type="tel" id="cl12" name="TelMain3" value="" maxlength="5" style="width:60px"> </td>
                   <%= f.hidden_field :tel_main %>
                 </tr>
                 <tr>
                   <td class="abc1">携帯電話番号</td>
-                  <td class="abc2"> <input type="text" id="cl14" name="TelSelpfhone1" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl15" name="TelSelpfhone2" value="" maxlength="5" style="width:60px"> - <input type="text" id="cl16" name="TelSelpfhone3" value="" maxlength="5" style="width:60px"> </td>
+                  <td class="abc2"> <input type="tel" id="cl14" name="TelSelpfhone1" value="" maxlength="5" style="width:60px"> - <input type="tel" id="cl15" name="TelSelpfhone2" value="" maxlength="5" style="width:60px"> - <input type="tel" id="cl16" name="TelSelpfhone3" value="" maxlength="5" style="width:60px"> </td>
                   <%= f.hidden_field :tel_selpfhone %>
                 </tr>
                 <tr>
-                  <td class="abc1">PCメールアドレス</td>
+                  <td class="abc1">PCメールアドレス<br>(PC/携帯どちらか入力<span class="required">必須</span>)</td>
                   <td class="abc2"><%= f.text_field :mail_pc %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">携帯メールアドレス</td>
+                  <td class="abc1">携帯メールアドレス<br>(PC/携帯どちらか入力<span class="required">必須</span>)</td>
                   <td class="abc2"><%= f.text_field :mail_pass %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">調査経験回数</td>
+                  <td class="abc1">調査経験回数<span class="required">(必須)</span></td>
                   <td class="abc2">
                     <%= f.select :survey_experience, {'0回': 1, '1～5回': 2, '6～10回': 3, '11回': 4}, { include_blank: '選択しない'} %>
                   </td>
                 </tr>
                 <tr>
-                  <td class="abc1">希望する調査</td>
+                  <td class="abc1">希望する調査<span class="required">(必須)</span></td>
                   <td class="abc2">
                   <%= f.hidden_field :traffic_survey, value: false %>
                   <%= f.check_box :traffic_survey, {}, true, false %>
@@ -193,7 +193,7 @@
                 </td>
                 </tr>
                 <tr>
-                  <td class="abc1">車の保有について</td>
+                  <td class="abc1">車の保有について<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.select :possession_car, {'はい': 1, 'いいえ': 2}, {include_blank: '選択しない'} %>
                   </td>
                 </tr>
@@ -202,7 +202,7 @@
                   <td class="abc2"><%= f.text_field :nearest_station %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">認知経路</td>
+                  <td class="abc1">認知経路<span class="required">(必須)</span></td>
                   <td class="abc2">
                   <%= f.select :cognitive_pathway, {'調査員説明会': 1, '知人の紹介': 2, 'SRCWebサイト': 3, 'その他': 4}, {include_blank: '選択しない'} %>
                   </td>
@@ -212,7 +212,7 @@
                   <td class="abc2"><%= f.text_field :cognitive_pathway_other %></td>
                 </tr>
                 <tr>
-                  <td class="abc1">パスワード</td>
+                  <td class="abc1">パスワード<span class="required">(必須)</span></td>
                   <td class="abc2"><%= f.text_field :password %></td>
                 </tr>
               </tbody>
@@ -274,53 +274,12 @@
             select_day.appendChild(op);
           }
       }
-
-      function clear(){
-            document.getElementById('cl02').value = '';
-            document.getElementById('cl03').value = '';
-            document.getElementById('cl04').value = '';
-            document.getElementById('cl05').value = '';
-            document.getElementById('cl06').value = '';
-            document.getElementById('cl07').value = '';
-            document.getElementById('cl08').value = '';
-            document.getElementById('cl09').value = '';
-            document.getElementById('cl10').value = '';
-            document.getElementById('cl11').value = '';
-            document.getElementById('cl12').value = '';
-            document.getElementById('cl13').value = '';
-                
-            document.getElementById('cl14').value = '';
-            document.getElementById('cl15').value = '';
-            document.getElementById('cl16').value = '';
-            document.getElementById('cl17').value = '';
-                                
-            //ランクはない
-            //document.getElementById('cl21').value = '';
-                
-            document.getElementById('cl22').value = '';
-                
-            document.getElementById('cl23').checked = false;
-            document.getElementById('cl24').checked = false;
-            document.getElementById('cl25').checked = false;
-            document.getElementById('cl26').checked = false;
-            document.getElementById('cl27').checked = false;
-            document.getElementById('cl28').checked = false;
-            document.getElementById('cl29').checked = false;
-            document.getElementById('cl30').checked = false;
-                
-            document.getElementById('cl31').value = '';
-            document.getElementById('cl32').value = '';
-            document.getElementById('cl33').value = '';
-            document.getElementById('cl34').value = '';
-            document.getElementById('cl35').value = '';   
-      }
     
       //load時に実行する。
       window.onload = function(){
         $set_year();
         $set_month();
         $set_day();
-        //clear();
       
         //submitされた時に実行する。
         document.getElementById("new_userinfo").onsubmit = function(){
@@ -333,6 +292,8 @@
           //郵便番号
           if(document.getElementById("cl01").value.trim()  !== "" && document.getElementById("cl02").value.trim()  !== ""){
             document.getElementById("userinfo_postnumber").value = document.getElementById("cl01").value.trim() +　"-" + document.getElementById("cl02").value.trim();
+          } else {
+            document.getElementById("userinfo_postnumber").value = ""
           }
 
           //都道府県
@@ -343,6 +304,8 @@
              document.getElementById("cl11").value.trim()  !== "" &&
              document.getElementById("cl12").value.trim()  !== ""){
               document.getElementById("userinfo_tel_main").value = document.getElementById("cl10").value +　"-" + document.getElementById("cl11").value +　"-" + document.getElementById("cl12").value;
+          } else {
+            document.getElementById("userinfo_tel_main").value = ""
           }
 
           //携帯電話番号
@@ -350,6 +313,8 @@
              document.getElementById("cl15").value.trim()  !== "" &&
              document.getElementById("cl16").value.trim()  !== ""){
               document.getElementById("userinfo_tel_selpfhone").value = document.getElementById("cl14").value +　"-" + document.getElementById("cl15").value +　"-" + document.getElementById("cl16").value;
+            } else {
+              document.getElementById("userinfo_tel_selpfhone").value = ""
             }
         }
 
@@ -391,8 +356,6 @@
             document.getElementById("cl16").value = tel_selpfhone_arr[2];
           }
         }
-
-
       }
 </script>
 </body>

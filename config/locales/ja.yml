@@ -19,6 +19,7 @@ ja:
         tel_selpfhone: "携帯電話番号"
         mail_pc: "PCメールアドレス"
         mail_pass: "携帯メールアドレス"
+        mail_pc_or_pass: "PCメールアドレスか携帯メールアドレス"
         survey_experience: "調査経験回数"
         desire_survey_check: "希望する調査"
         traffic_survey: "交通量調査"

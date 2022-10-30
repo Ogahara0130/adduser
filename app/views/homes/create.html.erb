@@ -16,13 +16,28 @@
 <body>
   <div id="container">
     <header>
-      <h1>ヘッダー</h1>
+      <h1>SRC調査員登録システム</h1>
     </header>
     <div id="contents">
       <section>
-        <h2>作成画面</h2>
-        <div>作成画面です</div>
+        <h2>登録完了画面</h2>
         <p>
+          <% if @userinfos.errors.any? %>
+        <div class = "errmsg">
+        <h3>登録処理でエラーが発生しました。</h3>
+        <ul>
+          <% @userinfos.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+        </ul>
+        </div>
+        <% end %>
+        <% if @userinfos.errors.any? == false %>
+          <div>会員情報の登録が完了しました。</div>
+        <% end %>
+        <div align="center">
+        <%= button_to "戻る", {controller: 'homes', action: 'top'}, {method: :get} %>
+        <div/>
         </p>
       </section>
     </div>

@@ -43,7 +43,7 @@
               </tr>
               <tr>
                 <td class="abc1">性別</td>
-                <td class="abc2"><%= @userinfos.sex %></td>
+                <td class="abc2"><div id="sex"></div></td>
               </tr>
               <tr>
                 <td class="abc1">生年月日</td>
@@ -55,7 +55,7 @@
               </tr>
               <tr>
                 <td class="abc1">都道府県</td>
-                <td class="abc2"><%= @userinfos.prefecture %></td>
+                <td class="abc2"><div id="prefecture"></div></td>
               </tr>
               <tr>
                 <td class="abc1">市区町村名</td>
@@ -83,7 +83,7 @@
               </tr>
               <tr>
                 <td class="abc1">調査経験回数</td>
-                <td class="abc2"><%= @userinfos.survey_experience %></td>
+                <td class="abc2"><div id="survey_experience"></div></td>
               </tr>
               <tr>
                 <td class="abc1">希望する調査</td>
@@ -91,11 +91,11 @@
               </tr>
               <tr>
                 <td class="abc1">最寄SRC事務所</td>
-                <td class="abc2"><%= @userinfos.nearest_office %></td>
+                <td class="abc2"><div id="nearest_office"></div></td>
               </tr>
               <tr>
                 <td class="abc1">車の保有について</td>
-                <td class="abc2"><%= @userinfos.possession_car %></td>
+                <td class="abc2"><div id="possession_car"></div></td>
               </tr>
               <tr>
                 <td class="abc1">自宅最寄り駅</td>
@@ -103,7 +103,7 @@
               </tr>
               <tr>
                 <td class="abc1">認知経路</td>
-                <td class="abc2"><%= @userinfos.cognitive_pathway %></td>
+                <td class="abc2"><div id="cognitive_pathway"></div></td>
               </tr>
               <tr>
                 <td class="abc1">認知経路 その他</td>
@@ -199,6 +199,180 @@
 <script type="text/javascript">
   //load時に実行する。
   window.onload = function(){
+    //性別に文字列をセット
+    if(document.getElementById("userinfo_sex").value == "1"){
+      document.getElementById("sex").innerHTML = "男";
+    } else {
+      document.getElementById("sex").innerHTML = "女";
+    }
+
+    //都道府県に文字列をセット
+    var prefecture_str;
+    switch (document.getElementById("userinfo_prefecture").value){
+      case "1":
+        prefecture_str = "北海道";
+        break;
+      case "2":
+        prefecture_str = "青森県";
+        break;
+      case "3":
+        prefecture_str = "岩手県";
+        break;
+      case "4":
+        prefecture_str = "宮城県";
+        break;
+      case "5":
+        prefecture_str = "秋田県";
+        break;
+      case "6":
+        prefecture_str = "山形県";
+        break;
+      case "7":
+        prefecture_str = "福島県";
+        break;
+      case "8":
+        prefecture_str = "茨城県";
+        break;
+      case "9":
+        prefecture_str = "栃木県";
+        break;
+      case "10":
+        prefecture_str = "群馬県";
+        break;
+      case "11":
+        prefecture_str = "埼玉県";
+        break;
+      case "12":
+        prefecture_str = "千葉県";
+        break;
+      case "13":
+        prefecture_str = "東京都";
+        break;
+      case "14":
+        prefecture_str = "神奈川県";
+        break;
+      case "15":
+        prefecture_str = "新潟県";
+        break;
+      case "16":
+        prefecture_str = "富山県";
+        break;
+      case "17":
+        prefecture_str = "石川県";
+        break;
+      case "18":
+        prefecture_str = "福井県";
+        break;
+      case "19":
+        prefecture_str = "山梨県";
+        break;
+      case "20":
+        prefecture_str = "長野県";
+        break;
+      case "21":
+        prefecture_str = "岐阜県";
+        break;
+      case "22":
+        prefecture_str = "静岡県";
+        break;
+      case "23":
+        prefecture_str = "愛知県";
+        break;
+      case "24":
+        prefecture_str = "三重県";
+        break;
+      case "25":
+        prefecture_str = "滋賀県";
+        break;
+      case "26":
+        prefecture_str = "京都府";
+        break;
+      case "27":
+        prefecture_str = "大阪府";
+        break;
+      case "28":
+        prefecture_str = "兵庫県";
+        break;
+      case "29":
+        prefecture_str = "奈良県";
+        break;
+      case "30":
+        prefecture_str = "和歌山県";
+        break;
+      case "31":
+        prefecture_str = "鳥取県";
+        break;
+      case "32":
+        prefecture_str = "島根県";
+        break;
+      case "33":
+        prefecture_str = "岡山県";
+        break;
+      case "34":
+        prefecture_str = "広島県";
+        break;
+      case "35":
+        prefecture_str = "山口県";
+        break;
+      case "36":
+        prefecture_str = "徳島県";
+        break;
+      case "37":
+        prefecture_str = "香川県";
+        break;
+      case "38":
+        prefecture_str = "愛媛県";
+        break;
+      case "39":
+        prefecture_str = "高知県";
+        break;
+      case "40":
+        prefecture_str = "福岡県";
+        break;
+      case "41":
+        prefecture_str = "佐賀県";
+        break;
+      case "42":
+        prefecture_str = "長崎県";
+        break;
+      case "43":
+        prefecture_str = "熊本県";
+        break;
+      case "44":
+        prefecture_str = "大分県";
+        break;
+      case "45":
+        prefecture_str = "宮崎県";
+        break;
+      case "46":
+        prefecture_str = "鹿児島県";
+        break;
+      case "47":
+        prefecture_str = "沖縄県";
+        break;
+      default:
+    }
+    document.getElementById("prefecture").innerHTML = prefecture_str;
+
+    //調査経験回数に文字列をセット
+    var survey_experience_str;
+    switch (document.getElementById("userinfo_survey_experience").value){
+      case "1":
+        survey_experience_str = "0回";
+        break;
+      case "2":
+        survey_experience_str = "1～5回";
+        break;
+      case "3":
+        survey_experience_str = "6～10回";
+        break;
+      case "4":
+        survey_experience_str = "11回";
+        break;
+        default:
+    }
+    document.getElementById("survey_experience").innerHTML = survey_experience_str;
+
     //希望する調査に文字列をセット
     let desire_survey_str = "";
 
@@ -212,6 +386,96 @@
     if(document.getElementById("userinfo_office_staff").value == "true") {desire_survey_str = desire_survey_str + "内勤スタッフ" + '<br>';}
 
     document.getElementById("desire_survey").innerHTML = desire_survey_str;
+    
+    //調査経験回数に文字列をセット
+    var survey_experience_str;
+    switch (document.getElementById("userinfo_survey_experience").value){
+      case "1":
+        survey_experience_str = "0回";
+        break;
+      case "2":
+        survey_experience_str = "1～5回";
+        break;
+      case "3":
+        survey_experience_str = "6～10回";
+        break;
+      case "4":
+        survey_experience_str = "11回";
+        break;
+        default:
+    }
+    document.getElementById("survey_experience").innerHTML = survey_experience_str;
+
+    //最寄SRC事務所に文字列をセット
+    var nearest_office_str;
+    switch (document.getElementById("userinfo_nearest_office").value){
+      case "10":
+        nearest_office_str = "北海道事務所";
+        break;
+      case "11":
+        nearest_office_str = "北東北事務所";
+        break;
+      case "2":
+        nearest_office_str = "東北事務所（仙台）";
+        break;
+      case "1":
+        nearest_office_str = "本社（西日暮里）";
+        break;
+      case "1":
+        nearest_office_str = "静岡事務所";
+        break;
+      case "4":
+        nearest_office_str = "名古屋事務所";
+        break;
+      case "5":
+        nearest_office_str = "大阪事務所";
+        break;
+      case "7":
+        nearest_office_str = "広島事務所";
+        break;
+      case "6":
+        nearest_office_str = "岡山事務所";
+        break;
+      case "9":
+        nearest_office_str = "四国事務所";
+        break;
+      case "8":
+        nearest_office_str = "九州事務所";
+        break;
+      case "12":
+        nearest_office_str = "南九州事務所";
+        break;
+      case "13":
+        nearest_office_str = "沖縄事務所";
+        break;
+        default:
+    }
+    document.getElementById("nearest_office").innerHTML = nearest_office_str;
+
+    //車の保有についてに文字列をセット
+    if(document.getElementById("userinfo_possession_car").value == "1"){
+      document.getElementById("possession_car").innerHTML = "はい";
+    } else {
+      document.getElementById("possession_car").innerHTML = "いいえ";
+    }
+
+    //調査経験回数に文字列をセット
+    var cognitive_pathway_str;
+    switch (document.getElementById("userinfo_cognitive_pathway").value){
+      case "1":
+        cognitive_pathway_str = "調査員説明会";
+        break;
+      case "2":
+        cognitive_pathway_str = "知人の紹介";
+        break;
+      case "3":
+        cognitive_pathway_str = "SRCWebサイト";
+        break;
+      case "4":
+        cognitive_pathway_str = "その他";
+        break;
+    }
+    document.getElementById("cognitive_pathway").innerHTML = cognitive_pathway_str;
   }
 </script>
 </body>

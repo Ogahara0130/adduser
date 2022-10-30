@@ -54,10 +54,10 @@
                 <tr>
                   <td class="abc1">性別</td>
                   <td class="abc2">
-                  <%= f.radio_button :sex, :male %>
-                  <%= f.label :sex, "男性", {value:1} %>
-                  <%= f.radio_button :sex, :female  %>
-                  <%= f.label :sex, "女性", {value:2} %>
+                  <%= f.radio_button :sex, 1 %>
+                  <%= f.label :sex, "男性"%>
+                  <%= f.radio_button :sex, 2  %>
+                  <%= f.label :sex, "女性"%>
                   </td>
                 </tr>
                 <tr>
@@ -331,19 +331,29 @@
                                                                String(document.getElementById("select_day").value).padStart(2, '0');
 
           //郵便番号
-          document.getElementById("userinfo_postnumber").value = document.getElementById("cl01").value +　"-" + document.getElementById("cl02").value;
+          if(document.getElementById("cl01").value.trim()  !== "" && document.getElementById("cl02").value.trim()  !== ""){
+            document.getElementById("userinfo_postnumber").value = document.getElementById("cl01").value.trim() +　"-" + document.getElementById("cl02").value.trim();
+          }
 
           //都道府県
           document.getElementById("userinfo_prefecture").value = document.getElementById("cl04").value;
 
           //自宅電話番号
-          document.getElementById("userinfo_tel_main").value = document.getElementById("cl10").value +　"-" + document.getElementById("cl11").value +　"-" + document.getElementById("cl12").value;
-        
+          if(document.getElementById("cl10").value.trim()  !== "" &&
+             document.getElementById("cl11").value.trim()  !== "" &&
+             document.getElementById("cl12").value.trim()  !== ""){
+              document.getElementById("userinfo_tel_main").value = document.getElementById("cl10").value +　"-" + document.getElementById("cl11").value +　"-" + document.getElementById("cl12").value;
+          }
+
           //携帯電話番号
-          document.getElementById("userinfo_tel_selpfhone").value = document.getElementById("cl14").value +　"-" + document.getElementById("cl15").value +　"-" + document.getElementById("cl16").value;
+          if(document.getElementById("cl14").value.trim()  !== "" &&
+             document.getElementById("cl15").value.trim()  !== "" &&
+             document.getElementById("cl16").value.trim()  !== ""){
+              document.getElementById("userinfo_tel_selpfhone").value = document.getElementById("cl14").value +　"-" + document.getElementById("cl15").value +　"-" + document.getElementById("cl16").value;
+            }
         }
 
-        //確認画面で修正ボタンを押された際に実行する。
+        //確認画面で修正ボタンを押された or 確認画面に遷移した際に実行する。
         if(location.pathname == "/back" || location.pathname == "/confirm"){
           var birthday = document.getElementById("userinfo_birthday").value;
           var birthday_arr = birthday.split("/");
@@ -354,9 +364,11 @@
           //郵便番号をセット
           var postnumber = document.getElementById("userinfo_postnumber").value;
           var postnumber_arr = postnumber.split("-");
-          document.getElementById("cl01").value = postnumber_arr[0];
-          document.getElementById("cl02").value = postnumber_arr[1];
-          
+          if(postnumber_arr.length > 1){
+            document.getElementById("cl01").value = postnumber_arr[0];
+            document.getElementById("cl02").value = postnumber_arr[1];
+          }
+
           //都道府県をセット
           var prefecture = document.getElementById("userinfo_prefecture").value;
           document.getElementById("cl04").value = prefecture;         
@@ -364,16 +376,20 @@
           //自宅電話番号をセット
           var tel_main = document.getElementById("userinfo_tel_main").value;
           var tel_main_arr = tel_main.split("-");
-          document.getElementById("cl10").value = tel_main_arr[0];
-          document.getElementById("cl11").value = tel_main_arr[1];
-          document.getElementById("cl12").value = tel_main_arr[2];
+          if(tel_main_arr.length > 2){
+            document.getElementById("cl10").value = tel_main_arr[0];
+            document.getElementById("cl11").value = tel_main_arr[1];
+            document.getElementById("cl12").value = tel_main_arr[2];
+          }
 
           //自宅電話番号をセット
           var tel_selpfhone = document.getElementById("userinfo_tel_selpfhone").value;
           var tel_selpfhone_arr = tel_selpfhone.split("-");
-          document.getElementById("cl14").value = tel_selpfhone_arr[0];
-          document.getElementById("cl15").value = tel_selpfhone_arr[1];
-          document.getElementById("cl16").value = tel_selpfhone_arr[2];
+          if(tel_main_arr.length > 2){
+            document.getElementById("cl14").value = tel_selpfhone_arr[0];
+            document.getElementById("cl15").value = tel_selpfhone_arr[1];
+            document.getElementById("cl16").value = tel_selpfhone_arr[2];
+          }
         }
 
 

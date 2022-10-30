@@ -9,7 +9,8 @@
 # migrations use external dependencies or application code.
 #
 # It's strongly recommended that you check this file into your version control system.
-ActiveRecord::Schema[7.0].define(version: 2022_10_22_093313) do
+
+ActiveRecord::Schema[7.0].define(version: 2022_10_28_004527) do
   create_table "admin_users", force: :cascade do |t|
     t.string "name"
     t.string "email"
@@ -18,9 +19,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_10_22_093313) do
     t.datetime "updated_at", null: false
   end
 
-end
-
-ActiveRecord::Schema[7.0].define(version: 2022_10_28_004527) do
   create_table "userinfos", force: :cascade do |t|
     t.string "name_first"
     t.string "name_last"

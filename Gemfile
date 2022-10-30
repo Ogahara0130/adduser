@@ -76,5 +76,9 @@ gem "jsbundling-rails"
 gem 'jquery-rails'
 gem 'jquery-datetimepicker-rails'
 
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'rb-readline'
+
 # 暗号化
 gem 'bcrypt'

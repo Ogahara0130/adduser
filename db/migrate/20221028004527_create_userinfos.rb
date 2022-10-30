@@ -1,6 +1,5 @@
 class CreateUserinfos < ActiveRecord::Migration[7.0]
   def change
-    drop_table :userinfos
 
     create_table :userinfos do |t|
       t.string :name_first

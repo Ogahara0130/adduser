@@ -36,7 +36,8 @@ class Userinfo < ApplicationRecord
     validates :cognitive_pathway, presence: { message: 'が選択されていません。' } 
     #パスワード
     validates :password, presence: { message: 'が入力されていません。' } 
- 
+    validates :password, format: { with: /\A^[0-9a-zA-Z]{8,}+$\z/, message: 'は半角英数字のみで8文字以上で設定してください。'}
+    
     #PCメールアドレスか携帯メールアドレスのどちらかが入力されているか
     private
     def mail_pc_or_pass

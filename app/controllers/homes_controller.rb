@@ -4,24 +4,28 @@ class HomesController < ApplicationController
   end
 
   def confirm
+    # セッションに保存する
+    session[:userinfos] = Userinfo.new(userinfos_params)
+
     @userinfos = Userinfo.new(userinfos_params)
     render :top if @userinfos.invalid?
   end 
 
 	def back
+    params[:userinfo] = session[:userinfos]
 		@userinfos = Userinfo.new(userinfos_params)
 		render :top
 	end
 
   def create
+    params[:userinfo] = session[:userinfos]
     @userinfos = Userinfo.new(userinfos_params)
     if @userinfos.save
-      # Handle a successful save.
       p "会員登録成功！"
     else
-      # 保存失敗
       p "会員登録失敗"
     end
+    session[:userinfos].clear
   end 
 
   def userinfos_params

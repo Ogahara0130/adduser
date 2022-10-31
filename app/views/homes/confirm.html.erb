@@ -119,68 +119,10 @@
             <tbody>
               <tr align="center">
               <%= form_for(@userinfos, url: back_path) do |f| %>
-                <%= f.hidden_field :name_last %>
-                <%= f.hidden_field :name_first_read %>
-                <%= f.hidden_field :name_last_read %>
-                <%= f.hidden_field :sex %>
-                <%= f.hidden_field :birthday %>
-                <%= f.hidden_field :postnumber %>
-                <%= f.hidden_field :prefecture %>
-                <%= f.hidden_field :municipalities %>
-                <%= f.hidden_field :street %>
-                <%= f.hidden_field :tel_main %>
-                <%= f.hidden_field :tel_selpfhone %>
-                <%= f.hidden_field :mail_pc %>
-                <%= f.hidden_field :mail_pass %>
-                <%= f.hidden_field :survey_experience %>
-                <%= f.hidden_field :traffic_survey %>
-                <%= f.hidden_field :driving_survey %>
-                <%= f.hidden_field :bus_survey %>
-                <%= f.hidden_field :questionnaire_distribution %>
-                <%= f.hidden_field :interview_survey %>
-                <%= f.hidden_field :visit_survey %>
-                <%= f.hidden_field :undercover_investigation %>
-                <%= f.hidden_field :office_staff %>
-                <%= f.hidden_field :nearest_office %>
-                <%= f.hidden_field :possession_car %>
-                <%= f.hidden_field :nearest_station %>
-                <%= f.hidden_field :cognitive_pathway %>
-                <%= f.hidden_field :cognitive_pathway_other %>
-                <%= f.hidden_field :password %>
-                <%= f.hidden_field :name_first %>
-                <td style="width:150px; padding-top:15px; padding-bottom:15px;"><%= f.submit "修正する", style: "width:150px" %></td>
+              <td style="width:150px; padding-top:15px; padding-bottom:15px;"><%= f.submit "修正する", style: "width:150px" %></td>
               <% end %>
               <%= form_for(@userinfos, url: create_path) do |f| %>
-                <%= f.hidden_field :name_last %>
-                <%= f.hidden_field :name_first_read %>
-                <%= f.hidden_field :name_last_read %>
-                <%= f.hidden_field :sex %>
-                <%= f.hidden_field :birthday %>
-                <%= f.hidden_field :postnumber %>
-                <%= f.hidden_field :prefecture %>
-                <%= f.hidden_field :municipalities %>
-                <%= f.hidden_field :street %>
-                <%= f.hidden_field :tel_main %>
-                <%= f.hidden_field :tel_selpfhone %>
-                <%= f.hidden_field :mail_pc %>
-                <%= f.hidden_field :mail_pass %>
-                <%= f.hidden_field :survey_experience %>
-                <%= f.hidden_field :traffic_survey %>
-                <%= f.hidden_field :driving_survey %>
-                <%= f.hidden_field :bus_survey %>
-                <%= f.hidden_field :questionnaire_distribution %>
-                <%= f.hidden_field :interview_survey %>
-                <%= f.hidden_field :visit_survey %>
-                <%= f.hidden_field :undercover_investigation %>
-                <%= f.hidden_field :office_staff %>
-                <%= f.hidden_field :nearest_office %>
-                <%= f.hidden_field :possession_car %>
-                <%= f.hidden_field :nearest_station %>
-                <%= f.hidden_field :cognitive_pathway %>
-                <%= f.hidden_field :cognitive_pathway_other %>
-                <%= f.hidden_field :password %>
-                <%= f.hidden_field :name_first %>
-                <td style="width:150px; padding-top:15px; padding-bottom:15px;"><%= f.submit "登録する", style: "width:150px" %></td>
+              <td style="width:150px; padding-top:15px; padding-bottom:15px;"><%= f.submit "登録する", style: "width:150px" %></td>
               <% end %>
               </tr>
             </tbody>
@@ -200,7 +142,7 @@
   //load時に実行する。
   window.onload = function(){
     //性別に文字列をセット
-    if(document.getElementById("userinfo_sex").value == "1"){
+    if("<%= @userinfos.sex %>" == "1"){
       document.getElementById("sex").innerHTML = "男";
     } else {
       document.getElementById("sex").innerHTML = "女";
@@ -208,7 +150,7 @@
 
     //都道府県に文字列をセット
     var prefecture_str;
-    switch (document.getElementById("userinfo_prefecture").value){
+    switch ("<%= @userinfos.prefecture %>"){
       case "1":
         prefecture_str = "北海道";
         break;
@@ -356,7 +298,7 @@
 
     //調査経験回数に文字列をセット
     var survey_experience_str;
-    switch (document.getElementById("userinfo_survey_experience").value){
+    switch ("<%= @userinfos.survey_experience %>"){
       case "1":
         survey_experience_str = "0回";
         break;
@@ -376,39 +318,20 @@
     //希望する調査に文字列をセット
     let desire_survey_str = "";
 
-    if(document.getElementById("userinfo_traffic_survey").value == "true") desire_survey_str = desire_survey_str + "交通量調査" + '<br>';
-    if(document.getElementById("userinfo_driving_survey").value == "true") {desire_survey_str = desire_survey_str + "走行調査" + '<br>';}
-    if(document.getElementById("userinfo_bus_survey").value == "true") {desire_survey_str = desire_survey_str + "バス調査" + '<br>';}
-    if(document.getElementById("userinfo_questionnaire_distribution").value == "true") {desire_survey_str = desire_survey_str + "アンケート配布" + '<br>';}
-    if(document.getElementById("userinfo_interview_survey").value == "true") {desire_survey_str = desire_survey_str + "聞き取り調査" + '<br>';}
-    if(document.getElementById("userinfo_visit_survey").value == "true") {desire_survey_str = desire_survey_str + "訪問調査" + '<br>';}
-    if(document.getElementById("userinfo_undercover_investigation").value == "true") {desire_survey_str = desire_survey_str + "覆面調査(店舗チェック)" + '<br>';}
-    if(document.getElementById("userinfo_office_staff").value == "true") {desire_survey_str = desire_survey_str + "内勤スタッフ" + '<br>';}
+    if(<%= @userinfos.traffic_survey %>) {desire_survey_str = desire_survey_str + "交通量調査" + '<br>'};
+    if(<%= @userinfos.driving_survey %>) {desire_survey_str = desire_survey_str + "走行調査" + '<br>';}
+    if(<%= @userinfos.bus_survey %>) {desire_survey_str = desire_survey_str + "バス調査" + '<br>';}
+    if(<%= @userinfos.questionnaire_distribution %>) {desire_survey_str = desire_survey_str + "アンケート配布" + '<br>';}
+    if(<%= @userinfos.interview_survey %>) {desire_survey_str = desire_survey_str + "聞き取り調査" + '<br>';}
+    if(<%= @userinfos.visit_survey %>) {desire_survey_str = desire_survey_str + "訪問調査" + '<br>';}
+    if(<%= @userinfos.undercover_investigation %>) {desire_survey_str = desire_survey_str + "覆面調査(店舗チェック)" + '<br>';}
+    if(<%= @userinfos.office_staff %>) {desire_survey_str = desire_survey_str + "内勤スタッフ" + '<br>';}
 
     document.getElementById("desire_survey").innerHTML = desire_survey_str;
-    
-    //調査経験回数に文字列をセット
-    var survey_experience_str;
-    switch (document.getElementById("userinfo_survey_experience").value){
-      case "1":
-        survey_experience_str = "0回";
-        break;
-      case "2":
-        survey_experience_str = "1～5回";
-        break;
-      case "3":
-        survey_experience_str = "6～10回";
-        break;
-      case "4":
-        survey_experience_str = "11回";
-        break;
-        default:
-    }
-    document.getElementById("survey_experience").innerHTML = survey_experience_str;
-
+  
     //最寄SRC事務所に文字列をセット
     var nearest_office_str;
-    switch (document.getElementById("userinfo_nearest_office").value){
+    switch ("<%= @userinfos.nearest_office %>"){
       case "10":
         nearest_office_str = "北海道事務所";
         break;
@@ -453,7 +376,7 @@
     document.getElementById("nearest_office").innerHTML = nearest_office_str;
 
     //車の保有についてに文字列をセット
-    if(document.getElementById("userinfo_possession_car").value == "1"){
+    if("<%= @userinfos.possession_car %>" == "1"){
       document.getElementById("possession_car").innerHTML = "はい";
     } else {
       document.getElementById("possession_car").innerHTML = "いいえ";
@@ -461,7 +384,7 @@
 
     //調査経験回数に文字列をセット
     var cognitive_pathway_str;
-    switch (document.getElementById("userinfo_cognitive_pathway").value){
+    switch ("<%= @userinfos.cognitive_pathway %>"){
       case "1":
         cognitive_pathway_str = "調査員説明会";
         break;

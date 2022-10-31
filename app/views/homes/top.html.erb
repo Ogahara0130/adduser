@@ -285,8 +285,8 @@
         document.getElementById("new_userinfo").onsubmit = function(){
           //値をセットする
           //生年月日
-          document.getElementById("userinfo_birthday").value = document.getElementById("select_year").value + "/" +
-                                                               String(document.getElementById("select_month").value).padStart(2, '0') + "/" +
+          document.getElementById("userinfo_birthday").value = document.getElementById("select_year").value + "-" +
+                                                               String(document.getElementById("select_month").value).padStart(2, '0') + "-" +
                                                                String(document.getElementById("select_day").value).padStart(2, '0');
 
           //郵便番号

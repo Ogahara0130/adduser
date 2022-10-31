@@ -1,6 +1,10 @@
 class CreateUserinfos < ActiveRecord::Migration[7.0]
   def change
+<<<<<<< HEAD
  
+=======
+
+>>>>>>> remotes/origin/hoge
     create_table :userinfos do |t|
       t.string :name_first
       t.string :name_last

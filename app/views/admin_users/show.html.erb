@@ -1,0 +1,118 @@
+<html lang="ja">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>調査員登録システム・管理画面</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+				<!--<script type="text/javascript" src="/0/tyousa_sys/js/footerFixed.js"></script>>
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+			<style>
+				.digg_pagination {
+				background: white;
+				cursor: default;
+				/* self-clearing method: */ }
+				.digg_pagination a, .digg_pagination span, .digg_pagination em {
+				padding: 0.2em 0.5em;
+				display: block;
+				float: left;
+				margin-right: 1px; }
+				.digg_pagination .disabled {
+				color: #999999;
+				border: 1px solid #dddddd; }
+				.digg_pagination .current {
+				font-style: normal;
+				font-weight: bold;
+				background: #2e6ab1;
+				color: white;
+				border: 1px solid #2e6ab1; }
+				.digg_pagination a {
+				text-decoration: none;
+				color: #105cb6;
+				border: 1px solid #9aafe5; }
+				.digg_pagination a:hover, .digg_pagination a:focus {
+				color: #000033;
+				border-color: #000033; }
+				.digg_pagination .page_info {
+				background: #2e6ab1;
+				color: white;
+				padding: 0.4em 0.6em;
+				width: 22em;
+				margin-bottom: 0.3em;
+				text-align: center; }
+				.digg_pagination .page_info b {
+				color: #000033;
+				background: #6aa6ed;
+				padding: 0.1em 0.25em; }
+				.digg_pagination:after {
+				content: ".";
+				display: block;
+				height: 0;
+				clear: both;
+				visibility: hidden; }
+				* html .digg_pagination {
+				height: 1%; }
+				*:first-child + html .digg_pagination {
+				overflow: hidden;
+				}
+				h2 {
+				float: left;
+				width: 94%;
+				z-index: 999;
+				line-height: 1em;
+				}
+			</style>
+</head>
+<body>
+	<div id="container">
+		<header>
+			<h1>ユーザ管理画面</h1>
+		</header>
+	<div id="contents">
+		<h2>
+			<%= image_tag 'head_logo.png' %>
+		</h2>
+
+
+			<div class="digg_pagination">
+				<%= will_paginate @userinfo, previous_label: '&#8592; &nbsp;前', next_label: '次 &#8594;', inner_window: 1, outer_window: 0 %>
+			</div>
+
+		<table class="ta1" border="1" cellpadding="5" width="100%">
+			<tbody>
+				<tr>
+					<th class="abc1">
+						お名前
+					</th>
+					<th class="abc1">
+						メールアドレス
+					</th>
+				</tr>
+				<% @userinfo.each do |user| %>
+				<tr>
+					<td class="abc1">
+						<%= user.name_first%>
+						<%= user.name_last%>
+					</td>
+					<td class="abc1">
+						<%= user.mail_pc%>
+					</td>
+				</tr>
+				<% end %>
+			</tbody>
+		</table>
+
+			<div class="digg_pagination">
+				<%= will_paginate @userinfo, previous_label: '&#8592; &nbsp;前', next_label: '次 &#8594;', inner_window: 1, outer_window: 0 %>
+			</div>
+			<div class="digg_pagination">
+				<%= link_to "CSV出力",admin_user_path(format: :csv) %>
+			</div>
+	
+		</div>
+</div>
+</body>
+</html>

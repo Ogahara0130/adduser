@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>SRC調査員登録システム</title>
+  <title>株式会社 丸尾計画事務所</title>
   <meta name="description" content="">
   <meta name="keywords" content="サーベイリサーチセンター,調査員登録システム,交通量調査">
   <meta name="viewport" content="width=device-width">
@@ -16,7 +16,7 @@
 <body>
   <div id="container">
     <header>
-      <h1>SRC調査員登録システム</h1>
+      <h1>株式会社 丸尾計画事務所</h1>
     </header>
     <div id="contents">
       <section>
@@ -90,7 +90,7 @@
                 <td class="abc2"><div id="desire_survey"></div></td>
               </tr>
               <tr>
-                <td class="abc1">最寄SRC事務所</td>
+                <td class="abc1">最寄丸尾計画事務所</td>
                 <td class="abc2"><div id="nearest_office"></div></td>
               </tr>
               <tr>
@@ -133,7 +133,7 @@
     <!--/contents-->
     <div id="footer">
       <footer>
-        <font color="white"><small>Copyright&copy; 2017 SURVEY RESEARCH CENTER CO., LTD. All Rights Reserved.</small></font>
+        <font color="white"><small>Copyright&copy; MARUO PLANNING OFFICE CO.,LTD . All Rights Reserved.</small></font>
       </footer>
     </div>
   </div>
@@ -329,47 +329,20 @@
 
     document.getElementById("desire_survey").innerHTML = desire_survey_str;
   
-    //最寄SRC事務所に文字列をセット
+    //最寄丸尾計画事務所に文字列をセット
     var nearest_office_str;
     switch ("<%= @userinfos.nearest_office %>"){
       case "10":
-        nearest_office_str = "北海道事務所";
+        nearest_office_str = "兵庫県神戸事務所";
         break;
       case "11":
-        nearest_office_str = "北東北事務所";
-        break;
-      case "2":
-        nearest_office_str = "東北事務所（仙台）";
-        break;
-      case "1":
-        nearest_office_str = "本社（西日暮里）";
-        break;
-      case "1":
-        nearest_office_str = "静岡事務所";
-        break;
-      case "4":
-        nearest_office_str = "名古屋事務所";
-        break;
-      case "5":
         nearest_office_str = "大阪事務所";
         break;
-      case "7":
-        nearest_office_str = "広島事務所";
+      case "2":
+        nearest_office_str = "奈良事務所";
         break;
-      case "6":
-        nearest_office_str = "岡山事務所";
-        break;
-      case "9":
-        nearest_office_str = "四国事務所";
-        break;
-      case "8":
-        nearest_office_str = "九州事務所";
-        break;
-      case "12":
-        nearest_office_str = "南九州事務所";
-        break;
-      case "13":
-        nearest_office_str = "沖縄事務所";
+      case "1":
+        nearest_office_str = "本社（兵庫県姫路事務所）";
         break;
         default:
     }
@@ -392,7 +365,7 @@
         cognitive_pathway_str = "知人の紹介";
         break;
       case "3":
-        cognitive_pathway_str = "SRCWebサイト";
+        cognitive_pathway_str = "丸尾計画事務所Webサイト";
         break;
       case "4":
         cognitive_pathway_str = "その他";
